@@ -1,14 +1,14 @@
 AXIS — Planeje viagens com quem importa
 
-Descrição
+Descrição--
 
 O Axis é um aplicativo mobile de planejamento de viagens em grupo. Ele resolve o problema da desorganização entre amigos que viajam juntos: roteiros bagunçados, gastos mal divididos e falta de sincronização entre os participantes. A proposta é centralizar tudo em um único lugar — destino, datas, atividades, orçamento e divisão de despesas — de forma simples e colaborativa.
 
-Objetivo
+Objetivo--
 
 Permitir que grupos de amigos ou familiares planejem suas viagens dentro de um único aplicativo, com criação de itinerários (manual ou por IA), compartilhamento em tempo real entre os participantes e controle transparente de gastos.
 
-Tecnologias Utilizadas
+Tecnologias Utilizadas --
 
 Backend 
 
