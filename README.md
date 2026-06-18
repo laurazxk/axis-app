@@ -30,7 +30,7 @@ Funcionalidades
 Tela de boas-vindas com apresentação do aplicativo 
 Cadastro e login de usuário (e-mail/senha)
 Exploração de destinos e países populares
-Criação de roteiro de viagem com destino, datas, atividades e orçamento
+Criação de roteiro de viagem com destino, atividades, datas e orçamento
 Geração de itinerário automática por Inteligência Artificial
 Código de convite para compartilhar a viagem com o grupo
 Controle de despesas com gráfico por categorias
