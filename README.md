@@ -104,16 +104,16 @@ Aplicativo Expo Go no celular (iOS ou Android)
 
 Passos
 
-# 1. Clonar o repositório
+1. Clonar o repositório
 git clone https://github.com/laurazxk/axis-app.git   
 
-# 2. Entrar na pasta do projeto
+2. Entrar na pasta do projeto
 cd axis-app
 
-# 3. Instalar as dependências
+3. Instalar as dependências
 npm install
 
-# 4. Iniciar o projeto
+4. Iniciar o projeto
 npx expo start
 
 Após rodar o último comando, escaneie o QR code com o aplicativo Expo Go para visualizar o app no celular.
