@@ -42,16 +42,15 @@ Estrutura do Projeto
 
 axis-app/
 ├── app/                    # Telas do aplicativo
-│   ├── (auth)/             # Fluxo de autenticação
-│   │   ├── splash.tsx      # Tela inicial com logo
-│   │   ├── welcome.tsx     # Carrossel de onboarding
-│   │   ├── login.tsx       # Login
+│   ├── public/             # Fluxo de autenticação
+│   │   ├── index.html     # Tela inicial com logo # Carrossel de onboarding
+│   │   ├── login.html      # Login
 │   │   └── register.tsx    # Cadastro
-│   ├── (tabs)/             # Telas principais (após login)
-│   │   ├── home.tsx        # Explorar destinos
-│   │   ├── trips.tsx       # Minhas viagens / itinerário
-│   │   ├── expenses.tsx    # Despesas
-│   │   └── profile.tsx     # Perfil
+│   ├── logic/             # Telas principais (após login)
+│   │   ├── home.tml       # Explorar destinos
+│   │   ├── trips.html       # Minhas viagens / itinerário
+│   │   ├── expenses.html    # Despesas
+│   │   └── profile.html     # Perfil
 │   └── _layout.tsx         # Configuração de navegação
 ├── components/             # Componentes reutilizáveis
 │   ├── GlassCard.tsx
@@ -74,7 +73,7 @@ Aplicativo Expo Go no celular (iOS ou Android)
 Passos
 
 bash# 1. Clonar o repositório
-git clone https://github.com/seu-usuario/axis-app.git   
+git clone https://github.com/laurazxk/axis-app.git   
 
 # 2. Entrar na pasta do projeto
 cd axis-app
@@ -87,12 +86,10 @@ npx expo start
 
 Após rodar o último comando, escaneie o QR code com o aplicativo Expo Go para visualizar o app no celular.
 
-
 Deploy
 
-
-Link do deploy no Render: (a ser adicionado)
-
+Link do deploy no Render:  https://axis-app-yj1r.onrender.com/
+Deploy Vercel: https://axis-app-bay.vercel.app/
 
 
 Aplicativo Mobile
@@ -105,14 +102,11 @@ Clone o repositório e rode npx expo start
 Escaneie o QR code gerado no terminal com o Expo Go
 
 
-Futuramente será disponibilizado um APK para instalação direta no Android.
+Futuramente será disponibilizado um APK para instalação direta no Android ou IOS.
 
 Integrantes
 
-Julia Bandeira
-Laura Marques
-Laila Camile
-Kyara Murayama
+Julia Bandeira, Laura Marques, Laila Camile e Kyara Murayama
 
 
 Pitch
@@ -122,6 +116,5 @@ O Axis foi desenvolvido para resolver um problema real: quem já tentou organiza
 
 Links Importantes
 
-Repositório GitHub: (a ser adicionado após criação)
-Deploy Render: https://axis-app-yj1r.onrender.com/
+Repositório GitHub: https://github.com/laurazxk/axis-app/tree/main
 Protótipo: https://axisapp2tw.vercel.app
