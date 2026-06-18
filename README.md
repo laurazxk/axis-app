@@ -37,8 +37,11 @@ Controle de despesas com gráfico por categorias
 Divisão de gastos entre os participantes (igualmente ou personalizado)
 Perfil do usuário com configurações (notificações e tema claro ou escuro)
 
+## Estrutura do Projeto
+
+```bash
 axis-app/
-├── backend/                     
+├── backend/
 │   ├── node_modules/
 │   ├── server.js
 │   ├── package.json
@@ -48,18 +51,18 @@ axis-app/
 │       ├── controllers/
 │       └── services/
 │
-├── mobile/                      # App React Native (Expo)
+├── mobile/
 │   ├── app/
-│   │   ├── (public)/            # fluxo de autenticação
-│   │   │   ├── index.tsx        # onboarding 
-│   │   │   ├── login.tsx        # login 
-│   │   │   └── register.tsx
+│   │   ├── (public)/
+│   │   │   ├── index.tsx        # onboarding
+│   │   │   ├── login.tsx        # login
+│   │   │   └── register.tsx     # cadastro
 │   │   │
-│   │   ├── (logic)/             # app após login
-│   │   │   ├── home.tsx         
-│   │   │   ├── trips.tsx
-│   │   │   ├── expenses.tsx
-│   │   │   └── profile.tsx
+│   │   ├── (logic)/
+│   │   │   ├── home.tsx         # explorar destinos
+│   │   │   ├── trips.tsx        # viagens
+│   │   │   ├── expenses.tsx     # despesas
+│   │   │   └── profile.tsx      # perfil
 │   │   │
 │   │   └── _layout.tsx
 │   │
@@ -76,22 +79,22 @@ axis-app/
 │   │   └── supabase.ts
 │   │
 │   ├── assets/
-│   │   ├── images/              
+│   │   ├── images/
 │   │   └── fonts/
 │   │
 │   ├── app.json
 │   └── package.json
 │
-├── web/                         
+├── web/
 │   ├── public/
 │   │   ├── css/
 │   │   │   └── estilo.css
 │   │   ├── imagens/
 │   │   └── index.html
-│ 
+│   └── README.md
 │
-├── README.md
-
+└── README.md
+```
 Como Executar
 Pré-requisitos
 
