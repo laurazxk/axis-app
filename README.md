@@ -37,31 +37,60 @@ Controle de despesas com gráfico por categorias
 Divisão de gastos entre os participantes (igualmente ou personalizado)
 Perfil do usuário com configurações (notificações e tema claro ou escuro)
 
-
-Estrutura do Projeto
-
 axis-app/
-├── app/                    # Telas do aplicativo
-│   ├── public/             # Fluxo de autenticação
-│   │   ├── index.html     # Tela inicial com logo # Carrossel de onboarding
-│   │   ├── login.html      # Login
-│   │   └── register.tsx    # Cadastro
-│   ├── logic/             # Telas principais (após login)
-│   │   ├── home.tml       # Explorar destinos
-│   │   ├── trips.html       # Minhas viagens / itinerário
-│   │   ├── expenses.html    # Despesas
-│   │   └── profile.html     # Perfil
-│   └── _layout.tsx         # Configuração de navegação
-├── components/             # Componentes reutilizáveis
-│   ├── GlassCard.tsx
-│   ├── GlassButton.tsx
-│   └── GlassInput.tsx
-├── constants/
-│   └── theme.ts            # Cores, fontes e espaçamentos
-├── services/
-│   ├── api.ts              # Configuração de requisições
-│   └── supabase.ts         # Conexão com banco de dados
-└── assets/                 # Imagens e fontes
+├── backend/                     
+│   ├── node_modules/
+│   ├── server.js
+│   ├── package.json
+│   ├── package-lock.json
+│   └── src/
+│       ├── routes/
+│       ├── controllers/
+│       └── services/
+│
+├── mobile/                      # App React Native (Expo)
+│   ├── app/
+│   │   ├── (public)/            # fluxo de autenticação
+│   │   │   ├── index.tsx        # onboarding 
+│   │   │   ├── login.tsx        # login 
+│   │   │   └── register.tsx
+│   │   │
+│   │   ├── (logic)/             # app após login
+│   │   │   ├── home.tsx         
+│   │   │   ├── trips.tsx
+│   │   │   ├── expenses.tsx
+│   │   │   └── profile.tsx
+│   │   │
+│   │   └── _layout.tsx
+│   │
+│   ├── components/
+│   │   ├── GlassCard.tsx
+│   │   ├── GlassButton.tsx
+│   │   └── GlassInput.tsx
+│   │
+│   ├── constants/
+│   │   └── theme.ts
+│   │
+│   ├── services/
+│   │   ├── api.ts
+│   │   └── supabase.ts
+│   │
+│   ├── assets/
+│   │   ├── images/              
+│   │   └── fonts/
+│   │
+│   ├── app.json
+│   └── package.json
+│
+├── web/                         
+│   ├── public/
+│   │   ├── css/
+│   │   │   └── estilo.css
+│   │   ├── imagens/
+│   │   └── index.html
+│ 
+│
+├── README.md
 
 Como Executar
 Pré-requisitos
