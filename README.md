@@ -104,7 +104,7 @@ Aplicativo Expo Go no celular (iOS ou Android)
 
 Passos
 
-bash# 1. Clonar o repositório
+# 1. Clonar o repositório
 git clone https://github.com/laurazxk/axis-app.git   
 
 # 2. Entrar na pasta do projeto
