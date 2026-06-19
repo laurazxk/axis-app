@@ -120,8 +120,8 @@ Após rodar o último comando, escaneie o QR code com o aplicativo Expo Go para 
 
 Deploy
 
-Link do deploy no Render:  https://axis-app-yj1r.onrender.com/
-Deploy Vercel: https://axis-app-bay.vercel.app/
+Deploy Backend (Render):  https://axis-travel-app.onrender.com
+Deploy Frontend (Vercel): https://axis-app-bay.vercel.app/
 
 
 Aplicativo Mobile
