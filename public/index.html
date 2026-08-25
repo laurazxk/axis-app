@@ -87,11 +87,11 @@
             document.getElementById(screenId).classList.add('active');
         }
     </script>
-
-    <!-- HOME -->
+        
+<!-- HOME -->
 <div id="screen-home" class="screen">
 
-    <!-- Cabeçalho -->
+    <!-- CABEÇALHO -->
     <header class="home-header">
 
         <button class="menu-button" aria-label="Menu">
@@ -107,24 +107,32 @@
     </header>
 
 
-    <!-- Conteúdo -->
+    <!-- CONTEÚDO ROLÁVEL -->
     <main class="home-content">
 
-        <h1>Olá!</h1>
+        <h1>Olá, Kyara!</h1>
 
-        <!-- Barra de destino -->
+
+        <!-- BUSCA -->
         <div class="destination-search">
-            <span>Qual seu destino?</span>
+
+            <span>Busque seu destino</span>
 
             <span class="search-icon">⌕</span>
+
         </div>
 
 
-        <!-- Destinos populares -->
+        <!-- =========================================
+             DESTINOS POPULARES
+        ========================================== -->
+
         <section class="home-section">
 
-            <h2>Destinos populares</h2>
+            <h2>Destinos Populares</h2>
 
+
+            <!-- FILTROS -->
             <div class="category-buttons">
 
                 <button class="category active">
@@ -136,24 +144,28 @@
                 </button>
 
                 <button class="category">
-                    Natureza
+                    Pontos turísticos
                 </button>
 
             </div>
 
 
+            <!-- CARROSSEL HORIZONTAL -->
             <div class="cards-container">
 
                 <div class="destination-card">
 
                     <img
                         src="/imagens/osaka.png"
-                        alt="Osaka"
+                        alt="Castelo de Osaka"
                     >
 
                     <div class="card-info">
-                        <strong>Osaka</strong>
-                        <span>Japão</span>
+
+                        <strong>Osaka, Japan</strong>
+
+                        <span>Castelo</span>
+
                     </div>
 
                 </div>
@@ -167,8 +179,31 @@
                     >
 
                     <div class="card-info">
-                        <strong>Santorini</strong>
-                        <span>Grécia</span>
+
+                        <strong>Santorini, Grécia</strong>
+
+                        <span>Arquitetura</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DESTINO TEMPORÁRIO -->
+
+                <div class="destination-card">
+
+                    <img
+                        src="/imagens/japao.png"
+                        alt="Kyoto"
+                    >
+
+                    <div class="card-info">
+
+                        <strong>Kyoto, Japão</strong>
+
+                        <span>Cultura</span>
+
                     </div>
 
                 </div>
@@ -182,8 +217,29 @@
                     >
 
                     <div class="card-info">
-                        <strong>Paris</strong>
-                        <span>França</span>
+
+                        <strong>Paris, França</strong>
+
+                        <span>História</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="destination-card">
+
+                    <img
+                        src="/imagens/italia.png"
+                        alt="Roma"
+                    >
+
+                    <div class="card-info">
+
+                        <strong>Roma, Itália</strong>
+
+                        <span>Turismo</span>
+
                     </div>
 
                 </div>
@@ -193,11 +249,17 @@
         </section>
 
 
-        <!-- Países populares -->
+
+        <!-- =========================================
+             PAÍSES POPULARES
+        ========================================== -->
+
         <section class="home-section">
 
-            <h2>Países populares</h2>
+            <h2>Países Populares</h2>
 
+
+            <!-- CARROSSEL HORIZONTAL -->
             <div class="cards-container">
 
                 <div class="destination-card">
@@ -208,8 +270,11 @@
                     >
 
                     <div class="card-info">
+
                         <strong>França</strong>
+
                         <span>Europa</span>
+
                     </div>
 
                 </div>
@@ -223,8 +288,11 @@
                     >
 
                     <div class="card-info">
+
                         <strong>Japão</strong>
+
                         <span>Ásia</span>
+
                     </div>
 
                 </div>
@@ -238,8 +306,49 @@
                     >
 
                     <div class="card-info">
+
                         <strong>Itália</strong>
+
                         <span>Europa</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TEMPORÁRIOS -->
+
+                <div class="destination-card">
+
+                    <img
+                        src="/imagens/paris.png"
+                        alt="Espanha"
+                    >
+
+                    <div class="card-info">
+
+                        <strong>Espanha</strong>
+
+                        <span>Europa</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="destination-card">
+
+                    <img
+                        src="/imagens/santorini.png"
+                        alt="Portugal"
+                    >
+
+                    <div class="card-info">
+
+                        <strong>Portugal</strong>
+
+                        <span>Europa</span>
+
                     </div>
 
                 </div>
@@ -248,14 +357,95 @@
 
         </section>
 
+
+
+        <!-- =========================================
+             MAIS DESTINOS
+        ========================================== -->
+
+        <section class="home-section">
+
+            <h2>Experiências em destaque</h2>
+
+
+            <div class="cards-container">
+
+                <div class="destination-card">
+
+                    <img
+                        src="/imagens/osaka.png"
+                        alt="Aventura"
+                    >
+
+                    <div class="card-info">
+
+                        <strong>Aventura</strong>
+
+                        <span>Experiências</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="destination-card">
+
+                    <img
+                        src="/imagens/santorini.png"
+                        alt="Praias"
+                    >
+
+                    <div class="card-info">
+
+                        <strong>Praias</strong>
+
+                        <span>Relaxar</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="destination-card">
+
+                    <img
+                        src="/imagens/japao.png"
+                        alt="Cultura"
+                    >
+
+                    <div class="card-info">
+
+                        <strong>Cultura</strong>
+
+                        <span>História</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Espaço para permitir que o último conteúdo
+             fique acima da navegação -->
+        <div class="home-bottom-space"></div>
+
     </main>
 
 
-    <!-- Navegação inferior -->
+
+    <!-- =========================================
+         NAVEGAÇÃO INFERIOR
+    ========================================== -->
+
     <nav class="bottom-navigation">
 
-        <!-- Mala / Viagens -->
-        <button class="nav-item" aria-label="Viagens">
+        <button
+            class="nav-item"
+            aria-label="Viagens"
+        >
 
             <span class="nav-icon">🧳</span>
 
@@ -264,7 +454,6 @@
         </button>
 
 
-        <!-- Casa / Home -->
         <button
             class="nav-item active"
             onclick="changeScreen('screen-home')"
@@ -278,8 +467,10 @@
         </button>
 
 
-        <!-- Favoritos -->
-        <button class="nav-item" aria-label="Favoritos">
+        <button
+            class="nav-item"
+            aria-label="Favoritos"
+        >
 
             <span class="nav-icon">♡</span>
 
@@ -288,8 +479,10 @@
         </button>
 
 
-        <!-- Perfil -->
-        <button class="nav-item" aria-label="Perfil">
+        <button
+            class="nav-item"
+            aria-label="Perfil"
+        >
 
             <span class="nav-icon">♙</span>
 
