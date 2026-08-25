@@ -220,7 +220,6 @@ body {
 #screen-home {
     background-color: #f7f7f7;
     color: #222222;
-
     overflow: hidden;
 }
 
@@ -234,9 +233,7 @@ body {
     min-height: 62px;
 
     display: grid;
-
     grid-template-columns: 1fr 1fr 1fr;
-
     align-items: center;
 
     padding: 0 18px;
@@ -278,10 +275,9 @@ body {
     padding: 0;
 
     border: none;
+    border-radius: 50%;
 
     background: transparent;
-
-    border-radius: 50%;
 
     overflow: hidden;
 
@@ -302,7 +298,6 @@ body {
 ===================================================== */
 
 .home-content {
-
     flex: 1;
 
     width: 100%;
@@ -310,16 +305,7 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
 
-    padding:
-
-        3px
-        0
-        100px;
-
-    /*
-       Permite arrastar a página
-       verticalmente no celular
-    */
+    padding: 3px 0 90px;
 
     -webkit-overflow-scrolling: touch;
 
@@ -327,7 +313,7 @@ body {
 }
 
 
-/* Esconde scrollbar */
+/* Esconde a barra de rolagem */
 
 .home-content::-webkit-scrollbar {
     display: none;
@@ -339,17 +325,11 @@ body {
 ===================================================== */
 
 .home-content > h1 {
-
-    margin:
-
-        0
-        30px
-        28px;
+    margin: 0 30px 28px;
 
     color: #303030;
 
     font-size: 28px;
-
     font-weight: 700;
 
     line-height: 1.2;
@@ -357,27 +337,20 @@ body {
 
 
 /* =====================================================
-   BUSCA
+   BARRA DE BUSCA
 ===================================================== */
 
 .destination-search {
-
     width: calc(100% - 32px);
 
     height: 47px;
 
-    margin:
-
-        0
-        16px
-        43px;
+    margin: 0 16px 43px;
 
     padding: 0 16px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     background: #ffffff;
@@ -389,37 +362,25 @@ body {
     font-size: 13px;
 
     box-shadow:
-
-        0
-        5px
-        9px
-        rgba(0, 0, 0, 0.20);
+        0 5px 9px rgba(0, 0, 0, 0.20);
 
     cursor: pointer;
 
     transition:
-
         transform 0.2s ease,
-
         box-shadow 0.2s ease;
 }
 
 
 .destination-search:active {
-
     transform: scale(0.98);
 
     box-shadow:
-
-        0
-        3px
-        6px
-        rgba(0, 0, 0, 0.18);
+        0 3px 6px rgba(0, 0, 0, 0.18);
 }
 
 
 .search-icon {
-
     color: #3f3f3f;
 
     font-size: 23px;
@@ -430,54 +391,40 @@ body {
 
 /* =====================================================
    SEÇÕES
+   SOMENTE:
+   1. Destinos Populares
+   2. Países Populares
 ===================================================== */
 
 .home-section {
+    width: 100%;
 
     margin-bottom: 28px;
-
-    width: 100%;
 }
 
 
 .home-section > h2 {
-
-    margin:
-
-        0
-        32px
-        15px;
+    margin: 0 32px 15px;
 
     color: #8792a5;
 
     font-size: 19px;
-
     font-weight: 600;
 }
 
 
 /* =====================================================
-   FILTROS
+   FILTROS DE DESTINOS
 ===================================================== */
 
 .category-buttons {
-
     display: flex;
 
     gap: 8px;
 
-    margin:
-
-        0
-        32px
-        17px;
+    margin: 0 32px 17px;
 
     overflow-x: auto;
-
-    /*
-       Permite arrastar filtros
-       horizontalmente
-    */
 
     -webkit-overflow-scrolling: touch;
 }
@@ -489,18 +436,11 @@ body {
 
 
 .category {
-
     flex-shrink: 0;
 
-    padding:
+    padding: 7px 13px;
 
-        7px
-        13px;
-
-    border:
-
-        none;
-
+    border: none;
     border-radius: 18px;
 
     background-color: #e6e6e6;
@@ -514,28 +454,20 @@ body {
     cursor: pointer;
 
     box-shadow:
-
-        0
-        3px
-        6px
-        rgba(0, 0, 0, 0.10);
+        0 3px 6px rgba(0, 0, 0, 0.10);
 
     transition:
-
         transform 0.2s ease,
-
         background-color 0.2s ease;
 }
 
 
 .category:active {
-
     transform: scale(0.94);
 }
 
 
 .category.active {
-
     background-color: #333333;
 
     color: #ffffff;
@@ -547,37 +479,27 @@ body {
 ===================================================== */
 
 .cards-container {
-
     display: flex;
 
     gap: 20px;
 
-    /*
-       Importante:
-       o carrossel ocupa a largura inteira
-    */
-
     width: 100%;
 
-    padding:
+    /*
+       O primeiro card começa alinhado
+       com o conteúdo da Home.
+    */
 
-        0
-        0
-        10px
-        18px;
+    padding: 0 0 10px 18px;
 
     overflow-x: auto;
-
     overflow-y: hidden;
-
-    /*
-       Permite arrastar com o dedo
-    */
 
     -webkit-overflow-scrolling: touch;
 
     /*
-       Animação de encaixe dos cards
+       Faz os cards "encaixarem"
+       ao arrastar.
     */
 
     scroll-snap-type: x mandatory;
@@ -586,27 +508,23 @@ body {
 }
 
 
-/* Remove scrollbar */
-
 .cards-container::-webkit-scrollbar {
-
     display: none;
 }
 
 
 /* =====================================================
-   CARD
+   CARDS
 ===================================================== */
 
 .destination-card {
-
     /*
-       Tamanho parecido com o Figma
+       Card maior, seguindo o protótipo.
+       Permite dois cards completos
+       e parte do terceiro.
     */
 
-    flex:
-
-        0 0 145px;
+    flex: 0 0 145px;
 
     min-width: 145px;
 
@@ -623,65 +541,41 @@ body {
     cursor: pointer;
 
     box-shadow:
-
-        0
-        5px
-        12px
-        rgba(0, 0, 0, 0.16);
-
-    /*
-       Animação inicial
-    */
+        0 5px 12px rgba(0, 0, 0, 0.16);
 
     animation:
-
-        cardAppear
-        0.45s
-        ease
-        both;
+        cardAppear 0.45s ease both;
 
     transition:
-
         transform 0.2s ease,
-
         box-shadow 0.2s ease;
 }
 
 
 /*
-   Pequeno efeito ao tocar
+   Efeito ao tocar no card
 */
 
 .destination-card:active {
-
-    transform:
-
-        scale(0.96);
+    transform: scale(0.96);
 
     box-shadow:
-
-        0
-        3px
-        8px
-        rgba(0, 0, 0, 0.15);
+        0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
 
 /* =====================================================
-   IMAGEM DO CARD
+   IMAGEM DOS CARDS
 ===================================================== */
 
 .destination-card img {
-
     display: block;
 
     width: calc(100% - 10px);
 
     height: 137px;
 
-    margin:
-
-        5px;
+    margin: 5px;
 
     object-fit: cover;
 
@@ -690,21 +584,15 @@ body {
 
 
 /* =====================================================
-   INFORMAÇÕES
+   INFORMAÇÕES DOS CARDS
 ===================================================== */
 
 .card-info {
-
-    padding:
-
-        4px
-        10px
-        8px;
+    padding: 4px 10px 8px;
 }
 
 
 .card-info strong {
-
     display: block;
 
     margin-bottom: 3px;
@@ -712,7 +600,6 @@ body {
     color: #333333;
 
     font-size: 11px;
-
     font-weight: 700;
 
     white-space: nowrap;
@@ -724,7 +611,6 @@ body {
 
 
 .card-info span {
-
     display: block;
 
     color: #999999;
@@ -746,21 +632,17 @@ body {
 @keyframes cardAppear {
 
     from {
-
         opacity: 0;
 
         transform:
-
             translateY(12px)
             scale(0.97);
     }
 
     to {
-
         opacity: 1;
 
         transform:
-
             translateY(0)
             scale(1);
     }
@@ -769,26 +651,28 @@ body {
 
 /* =====================================================
    ESPAÇO FINAL
-===================================================== */
+=====================================================
+
+   Não é uma terceira categoria.
+   É apenas espaço para que o último card
+   não fique escondido pela navegação.
+*/
 
 .home-bottom-space {
+    height: 70px;
 
-    height: 60px;
-
-    min-height: 60px;
+    min-height: 70px;
 }
 
 
 /* =====================================================
-   NAVEGAÇÃO GLASS
+   NAVEGAÇÃO INFERIOR - GLASS
 ===================================================== */
 
 .bottom-navigation {
-
     position: absolute;
 
     left: 16px;
-
     right: 16px;
 
     bottom: 12px;
@@ -802,66 +686,49 @@ body {
     justify-content: space-around;
 
     /*
-       GLASS
+       Fundo translúcido
     */
 
     background:
+        rgba(70, 70, 70, 0.55);
 
-        rgba(
-            70,
-            70,
-            70,
-            0.55
-        );
+    /*
+       Borda do vidro
+    */
 
     border:
-
         1px solid
-        rgba(
-            255,
-            255,
-            255,
-            0.45
-        );
+        rgba(255, 255, 255, 0.45);
 
     border-radius: 34px;
 
     /*
-       Blur do fundo
+       Efeito GLASS
     */
 
     backdrop-filter:
-
         blur(18px)
         saturate(140%);
 
     -webkit-backdrop-filter:
-
         blur(18px)
         saturate(140%);
 
-    box-shadow:
+    /*
+       Sombra externa + brilho interno
+    */
 
-        0
-        8px
-        25px
-        rgba(
-            0,
-            0,
-            0,
-            0.22
-        ),
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.22),
 
         inset
-        0
-        1px
-        1px
-        rgba(
-            255,
-            255,
-            255,
-            0.45
-        );
+        0 1px 1px
+        rgba(255, 255, 255, 0.45);
+
+    /*
+       Fica por cima do conteúdo
+    */
 
     z-index: 100;
 }
@@ -872,11 +739,9 @@ body {
 ===================================================== */
 
 .nav-item {
-
     position: relative;
 
     width: 58px;
-
     height: 55px;
 
     display: flex;
@@ -884,7 +749,6 @@ body {
     flex-direction: column;
 
     align-items: center;
-
     justify-content: center;
 
     gap: 2px;
@@ -894,42 +758,28 @@ body {
     background: transparent;
 
     color:
-
-        rgba(
-            255,
-            255,
-            255,
-            0.75
-        );
+        rgba(255, 255, 255, 0.75);
 
     font-family: 'Inter', sans-serif;
 
     cursor: pointer;
 
     transition:
-
-        transform
-        0.2s ease,
-
-        color
-        0.2s ease;
+        transform 0.2s ease,
+        color 0.2s ease;
 }
 
 
 .nav-item:active {
-
-    transform:
-
-        scale(0.90);
+    transform: scale(0.90);
 }
 
 
 /* =====================================================
-   ÍCONE
+   ÍCONES DA NAVEGAÇÃO
 ===================================================== */
 
 .nav-icon {
-
     position: relative;
 
     z-index: 2;
@@ -937,11 +787,9 @@ body {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     width: 28px;
-
     height: 28px;
 
     font-size: 22px;
@@ -951,11 +799,10 @@ body {
 
 
 /* =====================================================
-   TEXTO
+   TEXTO DOS ÍCONES
 ===================================================== */
 
 .nav-item small {
-
     position: relative;
 
     z-index: 2;
@@ -973,23 +820,20 @@ body {
 ===================================================== */
 
 .nav-item.active {
-
     color: #ffffff;
 }
 
 
 /* =====================================================
-   CÍRCULO GLASS DO ITEM ATIVO
+   CÍRCULO DO ITEM ATIVO
 ===================================================== */
 
 .nav-item.active::before {
-
     content: "";
 
     position: absolute;
 
     width: 45px;
-
     height: 45px;
 
     top: 4px;
@@ -997,59 +841,29 @@ body {
     left: 50%;
 
     transform:
-
         translateX(-50%);
 
     background:
-
-        rgba(
-            255,
-            255,
-            255,
-            0.20
-        );
+        rgba(255, 255, 255, 0.20);
 
     border:
-
         1px solid
-        rgba(
-            255,
-            255,
-            255,
-            0.35
-        );
+        rgba(255, 255, 255, 0.35);
 
     border-radius: 50%;
 
     backdrop-filter:
-
         blur(10px);
 
     -webkit-backdrop-filter:
-
         blur(10px);
 
     box-shadow:
-
         inset
-        0
-        1px
-        2px
-        rgba(
-            255,
-            255,
-            255,
-            0.50
-        ),
+        0 1px 2px
+        rgba(255, 255, 255, 0.50),
 
-        0
-        2px
-        8px
-        rgba(
-            0,
-            0,
-            0,
-            0.15
-        );
+        0 2px 8px
+        rgba(0, 0, 0, 0.15);
 }
 
