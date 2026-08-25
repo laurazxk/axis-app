@@ -72,7 +72,7 @@
         <p>O Axis ajuda seu grupo a organizar tudo antes e durante a aventura.</p>
     </div>
 
-    <button class="btn-round" onclick="changeScreen('screen-splash')">&#10142;</button>
+    <button class="btn-round" onclick="changeScreen('screen-home')">&#10142;</button>
 </div>
 
     <script>
@@ -87,6 +87,220 @@
             document.getElementById(screenId).classList.add('active');
         }
     </script>
+
+    <!-- HOME -->
+<div id="screen-home" class="screen">
+
+    <!-- Cabeçalho -->
+    <header class="home-header">
+
+        <button class="menu-button" aria-label="Menu">
+            ☰
+        </button>
+
+        <h2>Home</h2>
+
+        <button class="profile-button" aria-label="Perfil">
+            <img src="/imagens/perfil.png" alt="Perfil">
+        </button>
+
+    </header>
+
+
+    <!-- Conteúdo -->
+    <main class="home-content">
+
+        <h1>Olá!</h1>
+
+        <!-- Barra de destino -->
+        <div class="destination-search">
+            <span>Qual seu destino?</span>
+
+            <span class="search-icon">⌕</span>
+        </div>
+
+
+        <!-- Destinos populares -->
+        <section class="home-section">
+
+            <h2>Destinos populares</h2>
+
+            <div class="category-buttons">
+
+                <button class="category active">
+                    Tudo
+                </button>
+
+                <button class="category">
+                    Cidades
+                </button>
+
+                <button class="category">
+                    Natureza
+                </button>
+
+            </div>
+
+
+            <div class="cards-container">
+
+                <div class="destination-card">
+
+                    <img
+                        src="/imagens/osaka.png"
+                        alt="Osaka"
+                    >
+
+                    <div class="card-info">
+                        <strong>Osaka</strong>
+                        <span>Japão</span>
+                    </div>
+
+                </div>
+
+
+                <div class="destination-card">
+
+                    <img
+                        src="/imagens/santorini.png"
+                        alt="Santorini"
+                    >
+
+                    <div class="card-info">
+                        <strong>Santorini</strong>
+                        <span>Grécia</span>
+                    </div>
+
+                </div>
+
+
+                <div class="destination-card">
+
+                    <img
+                        src="/imagens/paris.png"
+                        alt="Paris"
+                    >
+
+                    <div class="card-info">
+                        <strong>Paris</strong>
+                        <span>França</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Países populares -->
+        <section class="home-section">
+
+            <h2>Países populares</h2>
+
+            <div class="cards-container">
+
+                <div class="destination-card">
+
+                    <img
+                        src="/imagens/franca.png"
+                        alt="França"
+                    >
+
+                    <div class="card-info">
+                        <strong>França</strong>
+                        <span>Europa</span>
+                    </div>
+
+                </div>
+
+
+                <div class="destination-card">
+
+                    <img
+                        src="/imagens/japao.png"
+                        alt="Japão"
+                    >
+
+                    <div class="card-info">
+                        <strong>Japão</strong>
+                        <span>Ásia</span>
+                    </div>
+
+                </div>
+
+
+                <div class="destination-card">
+
+                    <img
+                        src="/imagens/italia.png"
+                        alt="Itália"
+                    >
+
+                    <div class="card-info">
+                        <strong>Itália</strong>
+                        <span>Europa</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Navegação inferior -->
+    <nav class="bottom-navigation">
+
+        <!-- Mala / Viagens -->
+        <button class="nav-item" aria-label="Viagens">
+
+            <span class="nav-icon">🧳</span>
+
+            <small>Viagens</small>
+
+        </button>
+
+
+        <!-- Casa / Home -->
+        <button
+            class="nav-item active"
+            onclick="changeScreen('screen-home')"
+            aria-label="Home"
+        >
+
+            <span class="nav-icon">⌂</span>
+
+            <small>Home</small>
+
+        </button>
+
+
+        <!-- Favoritos -->
+        <button class="nav-item" aria-label="Favoritos">
+
+            <span class="nav-icon">♡</span>
+
+            <small>Favoritos</small>
+
+        </button>
+
+
+        <!-- Perfil -->
+        <button class="nav-item" aria-label="Perfil">
+
+            <span class="nav-icon">♙</span>
+
+            <small>Perfil</small>
+
+        </button>
+
+    </nav>
+
+</div>
+
 
 </body>
 </html>
