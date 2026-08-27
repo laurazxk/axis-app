@@ -563,6 +563,60 @@
                         </div>
 
                     </div>
+                     <!-- ==================================================
+                         ESPANHA
+                    =================================================== -->
+
+                    <div
+                        class="destination-card"
+                        onclick="openCountry('espanha')"
+                    >
+
+                        <img
+                            src="imagens/spain.jpg"
+                            alt="Espanha"
+                        >
+
+                        <div class="card-info">
+
+                            <strong>
+                                Espanha
+                            </strong>
+
+                            <span>
+                                Europa
+                            </span>
+
+                        </div>
+
+                    </div>
+                     <!-- ==================================================
+                         PORTUGUAL
+                    =================================================== -->
+
+                    <div
+                        class="destination-card"
+                        onclick="openCountry('portugal')"
+                    >
+
+                        <img
+                            src="imagens/portugal.jpg"
+                            alt="Itália"
+                        >
+
+                        <div class="card-info">
+
+                            <strong>
+                                Portugal
+                            </strong>
+
+                            <span>
+                                Europa
+                            </span>
+
+                        </div>
+
+                    </div>
                       <!-- ==================================================
                          EUA
                     =================================================== -->
@@ -1005,72 +1059,109 @@ function changeScreen(screenId) {
 /* =====================================================
    DESTINOS
 ===================================================== */
-
 const destinations = {
 
-
-    osaka: {
-
-        title:
-            "Castelo de Osaka",
-
-        location:
-            "Osaka, Japão",
-
-        image:
-            "imagens/osaka.png",
-
-        description:
-            "Explore um dos símbolos do Japão numa visita guiada ao Castelo de Osaka. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae lorem sed massa facilisis elementum.",
-
-        price:
-            "R$300,00"
-
+    "torre eiffel": {
+        title: "Torre Eiffel",
+        location: "Paris, França",
+        image: "imagens/torreeiffel.jpg",
+        description: "Conheça um dos monumentos mais famosos do mundo e aproveite a atmosfera encantadora de Paris.",
+        price: "R$300,00",
+        rating: "★★★★☆",
+        ratingText: "4.8 Avaliação"
     },
 
-
-    santorini: {
-
-        title:
-            "Santorini",
-
-        location:
-            "Santorini, Grécia",
-
-        image:
-            "imagens/santorini.png",
-
-        description:
-            "Descubra as paisagens de Santorini, suas casas brancas e o mar azul. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae lorem sed massa facilisis elementum.",
-
-        price:
-            "R$450,00"
-
+    "coliseu": {
+        title: "Coliseu",
+        location: "Roma, Itália",
+        image: "imagens/coliseu.jpg",
+        description: "Explore um dos maiores símbolos da Roma Antiga e conheça de perto sua história milenar.",
+        price: "R$280,00",
+        rating: "★★★★★",
+        ratingText: "4.9 Avaliação"
     },
 
+    "big ben": {
+        title: "Big Ben",
+        location: "Londres, Inglaterra",
+        image: "imagens/bigben.jpg",
+        description: "Visite um dos principais símbolos de Londres e descubra a história e a cultura britânica.",
+        price: "R$350,00",
+        rating: "★★★★☆",
+        ratingText: "4.7 Avaliação"
+    },
 
-    paris: {
+    "estatua da liberdade": {
+        title: "Estátua da Liberdade",
+        location: "New York, EUA",
+        image: "imagens/libertystatue.jpg",
+        description: "Conheça um dos maiores símbolos dos Estados Unidos e admire a vista de Nova York.",
+        price: "R$420,00",
+        rating: "★★★★★",
+        ratingText: "4.8 Avaliação"
+    },
 
-        title:
-            "Paris",
+    "cristo redentor": {
+        title: "Cristo Redentor",
+        location: "Rio de Janeiro, Brasil",
+        image: "imagens/cristo.jpg",
+        description: "Visite um dos cartões-postais mais famosos do Brasil e aproveite uma vista incrível do Rio de Janeiro.",
+        price: "R$180,00",
+        rating: "★★★★★",
+        ratingText: "4.9 Avaliação"
+    },
 
-        location:
-            "Paris, França",
+    "burj khalifa": {
+        title: "Burj Khalifa",
+        location: "Dubai, Emirados Árabes",
+        image: "imagens/burjkhalifa.jpg",
+        description: "Conheça o edifício mais alto do mundo e tenha uma experiência inesquecível em Dubai.",
+        price: "R$500,00",
+        rating: "★★★★★",
+        ratingText: "4.9 Avaliação"
+    },
 
-        image:
-            "imagens/paris.png",
+    "santorini": {
+        title: "Santorini",
+        location: "Santorini, Grécia",
+        image: "imagens/santorini.jpg",
+        description: "Descubra as paisagens paradisíacas, casas brancas e o famoso pôr do sol de Santorini.",
+        price: "R$450,00",
+        rating: "★★★★★",
+        ratingText: "4.9 Avaliação"
+    },
 
-        description:
-            "Conheça Paris e explore seus monumentos, sua arquitetura e sua cultura. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae lorem sed massa facilisis elementum.",
+    "taj mahal": {
+        title: "Taj Mahal",
+        location: "Agra, Índia",
+        image: "imagens/tajmahal.jpg",
+        description: "Conheça uma das construções mais impressionantes da Índia e um dos monumentos mais famosos do mundo.",
+        price: "R$380,00",
+        rating: "★★★★★",
+        ratingText: "4.8 Avaliação"
+    },
 
-        price:
-            "R$400,00"
+    "machu picchu": {
+        title: "Machu Picchu",
+        location: "Machu Picchu, Peru",
+        image: "imagens/machupicchu.jpg",
+        description: "Explore as antigas ruínas incas cercadas pelas impressionantes montanhas dos Andes.",
+        price: "R$550,00",
+        rating: "★★★★★",
+        ratingText: "4.9 Avaliação"
+    },
 
+    "sydney": {
+        title: "Sydney",
+        location: "Sydney, Austrália",
+        image: "imagens/sydney.jpg",
+        description: "Conheça uma das cidades mais famosas da Austrália, com belas praias, arquitetura e paisagens.",
+        price: "R$600,00",
+        rating: "★★★★☆",
+        ratingText: "4.7 Avaliação"
     }
 
 };
-
-
 
 /* =====================================================
    ABRIR DESTINO
@@ -1153,61 +1244,152 @@ function openDestination(id) {
    PAÍSES
 ===================================================== */
 
-const countries = {
+/* =====================================================
+   PAÍSES
+===================================================== */
 
+const countries = {
 
     franca: {
 
-        title:
-            "VISITE A",
+        title: "VISITE A",
 
-        country:
-            "FRANÇA",
+        country: "FRANÇA",
 
         description:
-            "Descubra a arte, a cultura e a história em um só lugar. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "Descubra a arte, a cultura e a história em um só lugar. Explore Paris, seus monumentos, museus e a famosa gastronomia francesa.",
 
-        image:
-            "imagens/franca.png"
+        image: "imagens/france.jpg"
 
     },
 
 
     japao: {
 
-        title:
-            "VISITE O",
+        title: "VISITE O",
 
-        country:
-            "JAPÃO",
+        country: "JAPÃO",
 
         description:
-            "Descubra o futuro e a tradição em um só lugar. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "Descubra o futuro e a tradição em um só lugar. Conheça templos históricos, cidades modernas e paisagens incríveis.",
 
-        image:
-            "imagens/japao.png"
+        image: "imagens/japan.jpg"
 
     },
 
 
     italia: {
 
-        title:
-            "VISITE A",
+        title: "VISITE A",
 
-        country:
-            "ITÁLIA",
+        country: "ITÁLIA",
 
         description:
-            "Descubra história, cultura e sabores em um só lugar. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "Descubra história, cultura e sabores em um só lugar. Explore cidades históricas, monumentos e a famosa culinária italiana.",
 
-        image:
-            "imagens/italia.png"
+        image: "imagens/italy.jpg"
+
+    },
+
+
+    espanha: {
+
+        title: "VISITE A",
+
+        country: "ESPANHA",
+
+        description:
+            "Descubra a cultura, a arquitetura e as belas paisagens da Espanha. Conheça cidades vibrantes, praias e monumentos históricos.",
+
+        image: "imagens/spain.jpg"
+
+    },
+
+
+    portugal: {
+
+        title: "VISITE",
+
+        country: "PORTUGAL",
+
+        description:
+            "Descubra cidades históricas, belas paisagens e a cultura portuguesa. Explore lugares encantadores e conheça a gastronomia local.",
+
+        image: "imagens/portugal.jpg"
+
+    },
+
+
+    eua: {
+
+        title: "VISITE OS",
+
+        country: "ESTADOS UNIDOS",
+
+        description:
+            "Descubra grandes cidades, paisagens incríveis e atrações famosas. Conheça lugares como Nova York, Los Angeles e Las Vegas.",
+
+        image: "imagens/usa.jpg"
+
+    },
+
+
+    "reino unido": {
+
+        title: "VISITE O",
+
+        country: "REINO UNIDO",
+
+        description:
+            "Descubra a história, a cultura e as paisagens do Reino Unido. Explore Londres e seus famosos monumentos.",
+
+        image: "imagens/uk.jpg"
+
+    },
+
+
+    coreia: {
+
+        title: "VISITE A",
+
+        country: "COREIA DO SUL",
+
+        description:
+            "Descubra uma mistura de tradição e modernidade. Conheça a cultura, a gastronomia e as grandes cidades sul-coreanas.",
+
+        image: "imagens/sk.jpg"
+
+    },
+
+
+    grecia: {
+
+        title: "VISITE A",
+
+        country: "GRÉCIA",
+
+        description:
+            "Descubra ilhas paradisíacas, construções históricas e paisagens incríveis. Explore lugares como Santorini e Atenas.",
+
+        image: "imagens/greece.jpg"
+
+    },
+
+
+    suica: {
+
+        title: "VISITE A",
+
+        country: "SUÍÇA",
+
+        description:
+            "Descubra montanhas, lagos e cidades encantadoras. A Suíça combina paisagens naturais impressionantes com paisagens incríveis.",
+
+        image: "imagens/switzerland.jpg"
 
     }
 
 };
-
 
 
 /* =====================================================
