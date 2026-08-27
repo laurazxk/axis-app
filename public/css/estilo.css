@@ -1,20 +1,4 @@
-:root {
-    --bg: #f7f7f7;
-    --white: #ffffff;
 
-    --text: #303030;
-    --text-light: #8795aa;
-    --muted: #999999;
-
-    --dark: #303030;
-
-    --glass: rgba(115, 115, 115, 0.58);
-}
-
-
-/* =========================================================
-   RESET
-========================================================= */
 
 * {
     box-sizing: border-box;
@@ -22,22 +6,19 @@
     padding: 0;
 }
 
-
 html,
 body {
     width: 100%;
     height: 100%;
 }
 
-
 body {
     font-family: 'Inter', sans-serif;
-
     background: #111111;
 
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
     min-height: 100vh;
 
@@ -97,7 +78,6 @@ body {
     flex-direction: column;
 
     opacity: 0;
-
     visibility: hidden;
 
     pointer-events: none;
@@ -112,7 +92,6 @@ body {
 
 .screen.active {
     opacity: 1;
-
     visibility: visible;
 
     pointer-events: auto;
@@ -124,7 +103,6 @@ body {
 ========================================================= */
 
 #screen-splash {
-
     background: #ffffff;
 
     align-items: center;
@@ -133,23 +111,18 @@ body {
     cursor: pointer;
 }
 
-
 .logo-box {
-
     display: flex;
 
     flex-direction: column;
 
     align-items: center;
-
     justify-content: center;
 
     text-align: center;
 }
 
-
 .real-logo {
-
     width: 180px;
 
     height: auto;
@@ -159,9 +132,7 @@ body {
     margin-bottom: 10px;
 }
 
-
 .logo-title-text {
-
     color: #111111;
 
     font-size: 16px;
@@ -175,9 +146,7 @@ body {
     padding-left: 6px;
 }
 
-
 .splash-footer {
-
     position: absolute;
 
     bottom: 38px;
@@ -185,17 +154,14 @@ body {
     color: #888888;
 
     font-size: 11px;
-
-    font-weight: 400;
 }
 
 
 /* =========================================================
-   TELA DESCOBRIR
+   DESCOBRIR
 ========================================================= */
 
 #screen-discover {
-
     justify-content: flex-end;
 
     background:
@@ -211,12 +177,11 @@ body {
     background-position: center;
 }
 
-
 .bottom-card {
-
     width: 100%;
 
-    padding: 38px 28px 32px;
+    padding:
+        38px 28px 32px;
 
     background: #ffffff;
 
@@ -229,9 +194,7 @@ body {
         0 -10px 30px rgba(0, 0, 0, 0.15);
 }
 
-
 .bottom-card h2 {
-
     color: #222222;
 
     font-size: 23px;
@@ -243,9 +206,7 @@ body {
     margin-bottom: 14px;
 }
 
-
 .bottom-card p {
-
     color: #777777;
 
     font-size: 13px;
@@ -255,9 +216,7 @@ body {
     margin-bottom: 27px;
 }
 
-
 .btn-main {
-
     width: 100%;
 
     height: 48px;
@@ -280,12 +239,6 @@ body {
 }
 
 
-.btn-main:active {
-
-    transform: scale(0.98);
-}
-
-
 /* =========================================================
    TELAS PLANEJE
 ========================================================= */
@@ -294,7 +247,6 @@ body {
 #screen-plan-2,
 #screen-plan-3,
 #screen-plan-4 {
-
     background: #ffffff;
 
     align-items: center;
@@ -305,9 +257,7 @@ body {
         30px 28px;
 }
 
-
 .plan-illustration {
-
     width: 280px;
 
     max-width: 85%;
@@ -317,9 +267,7 @@ body {
     object-fit: contain;
 }
 
-
 .text-group {
-
     width: 100%;
 
     text-align: center;
@@ -327,9 +275,7 @@ body {
     padding: 0 8px;
 }
 
-
 .text-group h2 {
-
     color: #303030;
 
     font-size: 23px;
@@ -341,9 +287,7 @@ body {
     margin-bottom: 12px;
 }
 
-
 .text-group p {
-
     color: #777777;
 
     font-size: 13px;
@@ -351,11 +295,8 @@ body {
     line-height: 1.55;
 }
 
-
 .btn-round {
-
     width: 58px;
-
     height: 58px;
 
     border: none;
@@ -365,7 +306,6 @@ body {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     background: #444444;
@@ -375,15 +315,6 @@ body {
     font-size: 23px;
 
     cursor: pointer;
-
-    box-shadow:
-        0 5px 15px rgba(0, 0, 0, 0.18);
-}
-
-
-.btn-round:active {
-
-    transform: scale(0.94);
 }
 
 
@@ -392,7 +323,6 @@ body {
 ========================================================= */
 
 #screen-home {
-
     background: #f7f7f7;
 
     color: #222222;
@@ -400,18 +330,15 @@ body {
 
 
 /* =========================================================
-   HEADER DA HOME
+   HEADER
 ========================================================= */
 
 .home-header {
-
-    position: relative;
-
     width: 100%;
 
-    height: 60px;
+    height: 64px;
 
-    min-height: 60px;
+    min-height: 64px;
 
     display: grid;
 
@@ -421,51 +348,48 @@ body {
     align-items: center;
 
     padding:
-        0 17px;
+        0 18px;
 }
 
 
 .menu-button {
-
     justify-self: start;
 
-    width: 30px;
-
-    height: 30px;
+    width: 34px;
+    height: 34px;
 
     border: none;
 
     background: transparent;
 
-    color: #7f8da2;
+    color: #8290a5;
 
-    font-size: 21px;
-
-    line-height: 30px;
+    font-size: 23px;
 
     cursor: pointer;
 }
 
 
 .home-header h2 {
-
     justify-self: center;
 
-    color: #7f8da2;
+    margin: 0;
 
-    font-size: 14px;
+    color: #8290a5;
+
+    font-size: 15px;
 
     font-weight: 600;
 }
 
 
 .profile-button {
-
     justify-self: end;
 
-    width: 30px;
+    width: 32px;
+    height: 32px;
 
-    height: 30px;
+    padding: 0;
 
     border: none;
 
@@ -480,9 +404,7 @@ body {
 
 
 .profile-button img {
-
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
@@ -490,21 +412,19 @@ body {
 
 
 /* =========================================================
-   CONTEÚDO DA HOME
+   CONTEÚDO HOME
 ========================================================= */
 
 .home-content {
-
     flex: 1;
 
     width: 100%;
 
     overflow-x: hidden;
-
     overflow-y: auto;
 
     padding:
-        0 12px 88px;
+        0 12px 80px;
 
     scrollbar-width: none;
 
@@ -518,17 +438,16 @@ body {
 
 
 /* =========================================================
-   OLÁ, KYARA!
+   OLÁ
 ========================================================= */
 
 .home-content > h1 {
-
     margin:
-        0 9px 20px;
+        0 9px 22px;
 
     color: #303030;
 
-    font-size: 23px;
+    font-size: 25px;
 
     font-weight: 700;
 
@@ -537,21 +456,20 @@ body {
 
 
 /* =========================================================
-   BARRA DE BUSCA
+   BUSCA
 ========================================================= */
 
 .destination-search {
-
     width:
         calc(100% - 4px);
 
-    height: 43px;
+    height: 47px;
 
     margin:
-        0 2px 32px;
+        0 2px 34px;
 
     padding:
-        0 14px;
+        0 16px;
 
     display: flex;
 
@@ -561,49 +479,44 @@ body {
 
     background: #ffffff;
 
-    border-radius: 23px;
+    border-radius: 25px;
 
     color: #999999;
 
-    font-size: 10px;
+    font-size: 11px;
 
     box-shadow:
-        0 4px 9px rgba(0, 0, 0, 0.16);
+        0 5px 11px rgba(0, 0, 0, 0.17);
 
     cursor: pointer;
 }
 
 
 .search-icon {
-
     color: #444444;
 
-    font-size: 18px;
-
-    line-height: 1;
+    font-size: 19px;
 }
 
 
 /* =========================================================
-   SEÇÕES DA HOME
+   SEÇÕES
 ========================================================= */
 
 .home-section {
-
     width: 100%;
 
-    margin-bottom: 28px;
+    margin-bottom: 32px;
 }
 
 
 .home-section > h2 {
-
     margin:
-        0 9px 10px;
+        0 9px 11px;
 
     color: #8795aa;
 
-    font-size: 15px;
+    font-size: 16px;
 
     font-weight: 600;
 
@@ -616,15 +529,14 @@ body {
 ========================================================= */
 
 .category-buttons {
-
     display: flex;
 
     align-items: center;
 
-    gap: 7px;
+    gap: 8px;
 
     margin:
-        0 9px 15px;
+        0 9px 16px;
 
     overflow-x: auto;
 
@@ -638,17 +550,16 @@ body {
 
 
 .category {
-
     flex-shrink: 0;
 
-    height: 21px;
+    height: 23px;
 
     padding:
-        0 11px;
+        0 12px;
 
     border: none;
 
-    border-radius: 12px;
+    border-radius: 14px;
 
     background: #e5e5e5;
 
@@ -658,14 +569,11 @@ body {
 
     font-size: 8px;
 
-    font-weight: 400;
-
     cursor: pointer;
 }
 
 
 .category.active {
-
     background: #303030;
 
     color: #ffffff;
@@ -673,12 +581,14 @@ body {
 
 
 /* =========================================================
-   CONTAINER DOS CARDS
+   CARDS
+   GRANDE COMO NA REFERÊNCIA
 ========================================================= */
 
 .cards-container {
+    width: max-content;
 
-    width: 100%;
+    min-width: 100%;
 
     display: flex;
 
@@ -688,7 +598,6 @@ body {
         0 9px 8px;
 
     overflow-x: auto;
-
     overflow-y: hidden;
 
     scroll-snap-type: x mandatory;
@@ -703,18 +612,18 @@ body {
 
 
 /* =========================================================
-   CARDS
-   TAMANHO MAIOR
+   CARD GRANDE
 ========================================================= */
 
 .destination-card {
-
     flex:
-        0 0 112px;
+        0 0 112px !important;
 
-    width: 112px;
+    width: 112px !important;
 
-    min-width: 112px;
+    min-width: 112px !important;
+
+    height: 151px;
 
     background: #ffffff;
 
@@ -725,7 +634,7 @@ body {
     scroll-snap-align: start;
 
     box-shadow:
-        0 4px 9px rgba(0, 0, 0, 0.14);
+        0 4px 10px rgba(0, 0, 0, 0.15);
 
     cursor: pointer;
 
@@ -735,22 +644,22 @@ body {
 
 
 .destination-card:active {
-
     transform: scale(0.97);
 }
 
 
 /* =========================================================
-   IMAGEM DOS CARDS
+   IMAGEM GRANDE
 ========================================================= */
 
 .destination-card img {
-
     display: block;
 
-    width: 100%;
+    width: 112px !important;
 
-    height: 111px;
+    height: 111px !important;
+
+    min-height: 111px;
 
     object-fit: cover;
 
@@ -759,22 +668,20 @@ body {
 
 
 /* =========================================================
-   TEXTO DOS CARDS
+   INFORMAÇÕES
 ========================================================= */
 
 .card-info {
-
     width: 100%;
 
-    min-height: 43px;
+    height: 40px;
 
     padding:
-        8px 8px 9px;
+        7px 8px 6px;
 }
 
 
 .card-info strong {
-
     display: block;
 
     margin-bottom: 3px;
@@ -796,7 +703,6 @@ body {
 
 
 .card-info span {
-
     display: block;
 
     color: #999999;
@@ -808,21 +714,35 @@ body {
 
 
 /* =========================================================
+   SEGUNDA FILEIRA
+========================================================= */
+
+.home-section:nth-of-type(2) {
+    margin-top: 3px;
+
+    margin-bottom: 10px;
+}
+
+
+.home-section:nth-of-type(2) .cards-container {
+    padding-bottom: 5px;
+}
+
+
+/* =========================================================
    NAVEGAÇÃO INFERIOR
    GLASSMORPHISM
 ========================================================= */
 
 .bottom-navigation {
-
     position: absolute;
 
     left: 16px;
-
     right: 16px;
 
-    bottom: 12px;
+    bottom: 11px;
 
-    height: 57px;
+    height: 58px;
 
     display: flex;
 
@@ -834,27 +754,26 @@ body {
         0 5px;
 
     background:
-        rgba(120, 120, 120, 0.56);
+        rgba(115, 115, 115, 0.58);
 
     border:
-        1px solid
-        rgba(255, 255, 255, 0.45);
+        1px solid rgba(255, 255, 255, 0.45);
 
-    border-radius: 30px;
+    border-radius: 31px;
 
     backdrop-filter:
-        blur(18px);
+        blur(20px);
 
     -webkit-backdrop-filter:
-        blur(18px);
+        blur(20px);
 
     box-shadow:
 
         0 7px 20px
         rgba(0, 0, 0, 0.20),
 
-        inset 0 1px 1px
-        rgba(255, 255, 255, 0.45);
+        inset 0 1px 2px
+        rgba(255, 255, 255, 0.42);
 
     z-index: 100;
 }
@@ -865,12 +784,10 @@ body {
 ========================================================= */
 
 .nav-item {
-
     position: relative;
 
-    width: 53px;
-
-    height: 50px;
+    width: 54px;
+    height: 51px;
 
     display: flex;
 
@@ -880,7 +797,7 @@ body {
 
     justify-content: center;
 
-    gap: 2px;
+    gap: 3px;
 
     border: none;
 
@@ -890,26 +807,26 @@ body {
         rgba(255, 255, 255, 0.88);
 
     cursor: pointer;
+
+    padding: 0;
 }
 
 
 .nav-item .material-symbols-outlined {
-
     position: relative;
 
-    z-index: 2;
+    z-index: 3;
 
-    font-size: 18px;
+    font-size: 19px;
 
     line-height: 1;
 }
 
 
 .nav-item small {
-
     position: relative;
 
-    z-index: 2;
+    z-index: 3;
 
     color:
         rgba(255, 255, 255, 0.92);
@@ -923,11 +840,10 @@ body {
 
 
 /* =========================================================
-   EFEITO GLASS NO ITEM ATIVO
+   CÍRCULO GLASS DO HOME ATIVO
 ========================================================= */
 
 .nav-item.active::before {
-
     content: "";
 
     position: absolute;
@@ -936,9 +852,8 @@ body {
 
     left: 50%;
 
-    width: 40px;
-
-    height: 40px;
+    width: 42px;
+    height: 42px;
 
     transform:
         translateX(-50%);
@@ -955,10 +870,15 @@ body {
     box-shadow:
 
         inset 0 1px 3px
-        rgba(255, 255, 255, 0.45),
+        rgba(255, 255, 255, 0.48),
 
         0 2px 7px
         rgba(0, 0, 0, 0.15);
+}
+
+
+.nav-item.active {
+    color: #ffffff;
 }
 
 
@@ -967,7 +887,6 @@ body {
 ========================================================= */
 
 #screen-destination {
-
     background: #ffffff;
 
     overflow: hidden;
@@ -975,9 +894,7 @@ body {
 
 
 .destination-page {
-
     width: 100%;
-
     height: 100%;
 
     display: flex;
@@ -988,12 +905,7 @@ body {
 }
 
 
-/* =========================================================
-   HERO DO DESTINO
-========================================================= */
-
 .destination-hero {
-
     position: relative;
 
     width: 100%;
@@ -1010,9 +922,7 @@ body {
 
 
 .destination-hero > img {
-
     width: 100%;
-
     height: 100%;
 
     display: block;
@@ -1026,23 +936,19 @@ body {
 ========================================================= */
 
 .back-button {
-
     position: absolute;
 
     top: 18px;
-
     left: 18px;
 
     z-index: 20;
 
     width: 40px;
-
     height: 40px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     border: none;
@@ -1069,7 +975,6 @@ body {
 ========================================================= */
 
 .destination-dots {
-
     position: absolute;
 
     bottom: 17px;
@@ -1081,8 +986,6 @@ body {
 
     display: flex;
 
-    align-items: center;
-
     gap: 5px;
 
     z-index: 5;
@@ -1090,9 +993,7 @@ body {
 
 
 .dot {
-
     width: 6px;
-
     height: 6px;
 
     border-radius: 50%;
@@ -1103,7 +1004,6 @@ body {
 
 
 .dot.active {
-
     width: 18px;
 
     border-radius: 10px;
@@ -1117,7 +1017,6 @@ body {
 ========================================================= */
 
 .destination-details {
-
     flex: 1;
 
     padding:
@@ -1135,7 +1034,6 @@ body {
 
 
 .destination-details h1 {
-
     color: #222222;
 
     font-size: 24px;
@@ -1149,7 +1047,6 @@ body {
 
 
 .destination-location {
-
     color: #8795aa;
 
     font-size: 12px;
@@ -1159,7 +1056,6 @@ body {
 
 
 .destination-details > p {
-
     color: #666666;
 
     font-size: 13px;
@@ -1173,7 +1069,6 @@ body {
 ========================================================= */
 
 .rating {
-
     display: flex;
 
     align-items: center;
@@ -1185,7 +1080,6 @@ body {
 
 
 .rating span {
-
     color: #e8ad20;
 
     font-size: 17px;
@@ -1195,7 +1089,6 @@ body {
 
 
 .rating small {
-
     color: #888888;
 
     font-size: 11px;
@@ -1203,11 +1096,10 @@ body {
 
 
 /* =========================================================
-   PREÇO E BOTÃO
+   PREÇO
 ========================================================= */
 
 .destination-bottom {
-
     display: flex;
 
     align-items: center;
@@ -1221,7 +1113,6 @@ body {
 
 
 .price-container {
-
     display: flex;
 
     flex-direction: column;
@@ -1229,7 +1120,6 @@ body {
 
 
 .price-container strong {
-
     color: #222222;
 
     font-size: 20px;
@@ -1239,7 +1129,6 @@ body {
 
 
 .price-container small {
-
     color: #999999;
 
     font-size: 9px;
@@ -1249,7 +1138,6 @@ body {
 
 
 .route-button {
-
     border: none;
 
     border-radius: 22px;
@@ -1276,7 +1164,6 @@ body {
 ========================================================= */
 
 #screen-country {
-
     background: #111111;
 
     overflow: hidden;
@@ -1284,19 +1171,16 @@ body {
 
 
 .country-page {
-
     position: relative;
 
     width: 100%;
-
     height: 100%;
 
     display: flex;
 
     align-items: flex-end;
 
-    padding:
-        30px;
+    padding: 30px;
 
     background-size: cover;
 
@@ -1306,12 +1190,7 @@ body {
 }
 
 
-/* =========================================================
-   OVERLAY
-========================================================= */
-
 .country-page::after {
-
     content: "";
 
     position: absolute;
@@ -1329,26 +1208,15 @@ body {
 }
 
 
-/* =========================================================
-   BOTÃO VOLTAR PAÍS
-========================================================= */
-
 .country-back {
-
     top: 18px;
-
     left: 18px;
 
     z-index: 10;
 }
 
 
-/* =========================================================
-   TEXTO PAÍS
-========================================================= */
-
 .country-content {
-
     position: relative;
 
     z-index: 5;
@@ -1360,7 +1228,6 @@ body {
 
 
 .country-content h1 {
-
     color: #ffffff;
 
     font-size: 29px;
@@ -1374,7 +1241,6 @@ body {
 
 
 .country-content h1 span {
-
     display: block;
 
     font-size: 38px;
@@ -1386,10 +1252,10 @@ body {
 
 
 .country-content p {
-
     max-width: 275px;
 
-    color: rgba(255, 255, 255, 0.90);
+    color:
+        rgba(255, 255, 255, 0.90);
 
     font-size: 13px;
 
@@ -1397,12 +1263,7 @@ body {
 }
 
 
-/* =========================================================
-   DOTS DO PAÍS
-========================================================= */
-
 .country-dots {
-
     position: absolute;
 
     z-index: 6;
@@ -1421,62 +1282,93 @@ body {
 
 
 /* =========================================================
-   RESPONSIVIDADE
+   TELAS PEQUENAS
 ========================================================= */
 
 @media (max-width: 360px) {
 
+    .home-header {
+        height: 58px;
+
+        min-height: 58px;
+    }
+
+
     .home-content {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-
-    .destination-card {
-
-        flex-basis: 102px;
-
-        width: 102px;
-
-        min-width: 102px;
-    }
-
-
-    .destination-card img {
-
-        height: 102px;
+        padding:
+            0 10px 78px;
     }
 
 
     .home-content > h1 {
+        font-size: 24px;
 
-        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+
+    .destination-search {
+        height: 45px;
+
+        margin-bottom: 30px;
+    }
+
+
+    .home-section > h2 {
+        font-size: 15px;
+    }
+
+
+    .cards-container {
+        gap: 12px;
+
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+
+    .destination-card {
+        flex:
+            0 0 108px !important;
+
+        width: 108px !important;
+
+        min-width: 108px !important;
+
+        height: 147px;
+    }
+
+
+    .destination-card img {
+        width: 108px !important;
+
+        height: 108px !important;
+    }
+
+
+    .bottom-navigation {
+        left: 13px;
+
+        right: 13px;
+
+        bottom: 10px;
     }
 
 }
 
 
+/* =========================================================
+   DESKTOP / PREVIEW
+========================================================= */
+
 @media (min-width: 450px) {
 
-    .home-header {
-        padding-left: 17px;
-        padding-right: 17px;
-    }
-
-
-    .home-content {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-
-
     .bottom-navigation {
-
         left: 16px;
 
         right: 16px;
 
-        bottom: 12px;
+        bottom: 11px;
     }
 
 }
