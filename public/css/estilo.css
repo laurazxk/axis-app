@@ -234,11 +234,14 @@ body {
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
     align-items: center;
 
     padding: 0 18px;
 }
 
+
+/* Botão menu */
 
 .menu-button {
     justify-self: start;
@@ -246,44 +249,47 @@ body {
     border: none;
     background: transparent;
 
-    color: #8792a5;
+    color: #7d8798;
 
-    font-size: 22px;
+    font-size: 20px;
 
     cursor: pointer;
 }
 
+
+/* Título Home */
 
 .home-header h2 {
     justify-self: center;
 
     margin: 0;
 
-    color: #8792a5;
+    color: #7d8798;
 
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 600;
 }
 
 
+/* Botão perfil */
+
 .profile-button {
     justify-self: end;
 
-    width: 44px;
-    height: 44px;
+    width: 34px;
+    height: 34px;
 
     padding: 0;
 
     border: none;
-    border-radius: 50%;
-
     background: transparent;
+
+    border-radius: 50%;
 
     overflow: hidden;
 
     cursor: pointer;
 }
-
 
 .profile-button img {
     width: 100%;
@@ -300,239 +306,162 @@ body {
 .home-content {
     flex: 1;
 
-    width: 100%;
-
     overflow-y: auto;
     overflow-x: hidden;
 
-    padding: 3px 0 90px;
-
-    -webkit-overflow-scrolling: touch;
-
-    scroll-behavior: smooth;
+    padding: 3px 14px 85px;
 }
-
-
-/* Esconde a barra de rolagem */
 
 .home-content::-webkit-scrollbar {
     display: none;
 }
 
 
-/* =====================================================
-   SAUDAÇÃO
-===================================================== */
+/* Saudação */
 
 .home-content > h1 {
-    margin: 0 30px 28px;
+    margin: 0 7px 16px;
 
     color: #303030;
 
-    font-size: 28px;
+    font-size: 23px;
     font-weight: 700;
-
-    line-height: 1.2;
 }
 
 
 /* =====================================================
-   BARRA DE BUSCA
+   BARRA "QUAL SEU DESTINO?"
 ===================================================== */
 
 .destination-search {
-    width: calc(100% - 32px);
+    width: calc(100% - 4px);
+    height: 43px;
 
-    height: 47px;
+    margin: 0 2px 30px;
 
-    margin: 0 16px 43px;
-
-    padding: 0 16px;
+    padding: 0 14px;
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
-    background: #ffffff;
+    background-color: #ffffff;
 
-    border-radius: 25px;
+    border-radius: 23px;
 
-    color: #8b8b8b;
+    color: #999999;
 
-    font-size: 13px;
+    font-size: 11px;
 
     box-shadow:
-        0 5px 9px rgba(0, 0, 0, 0.20);
+        0 4px 8px rgba(0, 0, 0, 0.16);
 
     cursor: pointer;
 
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+    transition: transform 0.2s ease;
 }
-
 
 .destination-search:active {
     transform: scale(0.98);
-
-    box-shadow:
-        0 3px 6px rgba(0, 0, 0, 0.18);
 }
 
-
 .search-icon {
-    color: #3f3f3f;
-
-    font-size: 23px;
-
-    line-height: 1;
+    color: #4d4d4d;
+    font-size: 19px;
 }
 
 
 /* =====================================================
    SEÇÕES
-   SOMENTE:
-   1. Destinos Populares
-   2. Países Populares
 ===================================================== */
 
 .home-section {
-    width: 100%;
-
-    margin-bottom: 28px;
+    margin-bottom: 23px;
 }
 
-
 .home-section > h2 {
-    margin: 0 32px 15px;
+    margin: 0 7px 10px;
 
     color: #8792a5;
 
-    font-size: 19px;
+    font-size: 15px;
     font-weight: 600;
 }
 
 
 /* =====================================================
-   FILTROS DE DESTINOS
+   CATEGORIAS
 ===================================================== */
 
 .category-buttons {
     display: flex;
 
-    gap: 8px;
+    gap: 6px;
 
-    margin: 0 32px 17px;
+    margin: 0 7px 12px;
 
     overflow-x: auto;
-
-    -webkit-overflow-scrolling: touch;
 }
-
 
 .category-buttons::-webkit-scrollbar {
     display: none;
 }
 
-
 .category {
     flex-shrink: 0;
 
-    padding: 7px 13px;
+    padding: 5px 10px;
 
     border: none;
-    border-radius: 18px;
 
-    background-color: #e6e6e6;
+    border-radius: 14px;
+
+    background-color: #e5e5e5;
 
     color: #555555;
 
     font-family: 'Inter', sans-serif;
 
-    font-size: 10px;
+    font-size: 8px;
 
     cursor: pointer;
-
-    box-shadow:
-        0 3px 6px rgba(0, 0, 0, 0.10);
-
-    transition:
-        transform 0.2s ease,
-        background-color 0.2s ease;
 }
-
-
-.category:active {
-    transform: scale(0.94);
-}
-
 
 .category.active {
     background-color: #333333;
-
     color: #ffffff;
 }
 
 
 /* =====================================================
-   CARROSSEL HORIZONTAL
+   CARDS DOS DESTINOS
 ===================================================== */
 
 .cards-container {
     display: flex;
 
-    gap: 20px;
+    gap: 12px;
 
-    width: 100%;
-
-    /*
-       O primeiro card começa alinhado
-       com o conteúdo da Home.
-    */
-
-    padding: 0 0 10px 18px;
+    padding: 2px 7px 8px;
 
     overflow-x: auto;
     overflow-y: hidden;
 
-    -webkit-overflow-scrolling: touch;
-
-    /*
-       Faz os cards "encaixarem"
-       ao arrastar.
-    */
-
     scroll-snap-type: x mandatory;
-
-    scroll-behavior: smooth;
 }
-
 
 .cards-container::-webkit-scrollbar {
     display: none;
 }
 
 
-/* =====================================================
-   CARDS
-===================================================== */
-
 .destination-card {
-    /*
-       Card maior, seguindo o protótipo.
-       Permite dois cards completos
-       e parte do terceiro.
-    */
-
-    flex: 0 0 145px;
-
-    min-width: 145px;
-
-    height: 190px;
+    flex: 0 0 101px;
 
     background-color: #ffffff;
 
-    border-radius: 14px;
+    border-radius: 11px;
 
     overflow: hidden;
 
@@ -541,56 +470,29 @@ body {
     cursor: pointer;
 
     box-shadow:
-        0 5px 12px rgba(0, 0, 0, 0.16);
+        0 3px 9px rgba(0, 0, 0, 0.14);
 
-    animation:
-        cardAppear 0.45s ease both;
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+    transition: transform 0.2s ease;
 }
-
-
-/*
-   Efeito ao tocar no card
-*/
 
 .destination-card:active {
-    transform: scale(0.96);
-
-    box-shadow:
-        0 3px 8px rgba(0, 0, 0, 0.15);
+    transform: scale(0.97);
 }
 
-
-/* =====================================================
-   IMAGEM DOS CARDS
-===================================================== */
 
 .destination-card img {
     display: block;
 
-    width: calc(100% - 10px);
-
-    height: 137px;
-
-    margin: 5px;
+    width: 100%;
+    height: 94px;
 
     object-fit: cover;
-
-    border-radius: 10px;
 }
 
-
-/* =====================================================
-   INFORMAÇÕES DOS CARDS
-===================================================== */
 
 .card-info {
-    padding: 4px 10px 8px;
+    padding: 7px 8px 9px;
 }
-
 
 .card-info strong {
     display: block;
@@ -599,74 +501,21 @@ body {
 
     color: #333333;
 
-    font-size: 11px;
-    font-weight: 700;
-
-    white-space: nowrap;
-
-    overflow: hidden;
-
-    text-overflow: ellipsis;
+    font-size: 8px;
+    font-weight: 600;
 }
-
 
 .card-info span {
     display: block;
 
     color: #999999;
 
-    font-size: 10px;
-
-    white-space: nowrap;
-
-    overflow: hidden;
-
-    text-overflow: ellipsis;
+    font-size: 7px;
 }
 
 
 /* =====================================================
-   ANIMAÇÃO DOS CARDS
-===================================================== */
-
-@keyframes cardAppear {
-
-    from {
-        opacity: 0;
-
-        transform:
-            translateY(12px)
-            scale(0.97);
-    }
-
-    to {
-        opacity: 1;
-
-        transform:
-            translateY(0)
-            scale(1);
-    }
-}
-
-
-/* =====================================================
-   ESPAÇO FINAL
-=====================================================
-
-   Não é uma terceira categoria.
-   É apenas espaço para que o último card
-   não fique escondido pela navegação.
-*/
-
-.home-bottom-space {
-    height: 70px;
-
-    min-height: 70px;
-}
-
-
-/* =====================================================
-   NAVEGAÇÃO INFERIOR - GLASS
+   BARRA DE NAVEGAÇÃO GLASS
 ===================================================== */
 
 .bottom-navigation {
@@ -674,63 +523,29 @@ body {
 
     left: 16px;
     right: 16px;
-
     bottom: 12px;
 
-    height: 66px;
+    height: 56px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: space-around;
 
-    /*
-       Fundo translúcido
-    */
+    background: rgba(255, 255, 255, 0.38);
 
-    background:
-        rgba(70, 70, 70, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.55);
 
-    /*
-       Borda do vidro
-    */
+    border-radius: 28px;
 
-    border:
-        1px solid
-        rgba(255, 255, 255, 0.45);
-
-    border-radius: 34px;
-
-    /*
-       Efeito GLASS
-    */
-
-    backdrop-filter:
-        blur(18px)
-        saturate(140%);
-
-    -webkit-backdrop-filter:
-        blur(18px)
-        saturate(140%);
-
-    /*
-       Sombra externa + brilho interno
-    */
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 
     box-shadow:
-        0 8px 25px
-        rgba(0, 0, 0, 0.22),
+        0 8px 25px rgba(0, 0, 0, 0.15),
+        inset 0 1px 1px rgba(255, 255, 255, 0.5);
 
-        inset
-        0 1px 1px
-        rgba(255, 255, 255, 0.45);
-
-    /*
-       Fica por cima do conteúdo
-    */
-
-    z-index: 100;
+    z-index: 20;
 }
 
 
@@ -741,8 +556,8 @@ body {
 .nav-item {
     position: relative;
 
-    width: 58px;
-    height: 55px;
+    width: 50px;
+    height: 48px;
 
     display: flex;
 
@@ -757,113 +572,576 @@ body {
 
     background: transparent;
 
-    color:
-        rgba(255, 255, 255, 0.75);
+    color: rgba(50, 50, 50, 0.65);
 
     font-family: 'Inter', sans-serif;
 
     cursor: pointer;
 
     transition:
-        transform 0.2s ease,
-        color 0.2s ease;
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 
-.nav-item:active {
-    transform: scale(0.90);
-}
-
-
-/* =====================================================
-   ÍCONES DA NAVEGAÇÃO
-===================================================== */
+/* Ícones */
 
 .nav-icon {
     position: relative;
-
-    z-index: 2;
+    z-index: 1;
 
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    width: 28px;
-    height: 28px;
+    width: 25px;
+    height: 25px;
 
-    font-size: 22px;
+    font-size: 20px;
 
     line-height: 1;
 }
 
 
-/* =====================================================
-   TEXTO DOS ÍCONES
-===================================================== */
+/* Texto */
 
 .nav-item small {
     position: relative;
+    z-index: 1;
 
-    z-index: 2;
-
-    font-size: 8px;
-
+    font-size: 7px;
     font-weight: 600;
 
     line-height: 1;
 }
 
 
-/* =====================================================
-   ITEM ATIVO
-===================================================== */
+/* Item selecionado */
 
 .nav-item.active {
-    color: #ffffff;
+    color: #202020;
 }
 
 
-/* =====================================================
-   CÍRCULO DO ITEM ATIVO
-===================================================== */
+/* Círculo de vidro do item selecionado */
 
 .nav-item.active::before {
     content: "";
 
     position: absolute;
 
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
 
-    top: 4px;
-
+    top: 3px;
     left: 50%;
 
-    transform:
-        translateX(-50%);
+    transform: translateX(-50%);
 
-    background:
-        rgba(255, 255, 255, 0.20);
+    background: rgba(255, 255, 255, 0.28);
 
-    border:
-        1px solid
-        rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.35);
 
     border-radius: 50%;
 
-    backdrop-filter:
-        blur(10px);
-
-    -webkit-backdrop-filter:
-        blur(10px);
-
     box-shadow:
-        inset
-        0 1px 2px
-        rgba(255, 255, 255, 0.50),
-
-        0 2px 8px
-        rgba(0, 0, 0, 0.15);
+        inset 0 1px 2px rgba(255, 255, 255, 0.6),
+        0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
+
+/* Efeito de toque */
+
+.nav-item:active {
+    transform: scale(0.9);
+}
+/* =====================================================
+   TELA DE DESTINO
+===================================================== */
+
+#screen-destination {
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+
+/* Página inteira do destino */
+
+.destination-page {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #ffffff;
+}
+
+
+/* =====================================================
+   IMAGEM PRINCIPAL DO DESTINO
+===================================================== */
+
+.destination-hero {
+    position: relative;
+
+    width: 100%;
+    height: 48%;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 0 0 28px 28px;
+}
+
+
+.destination-hero > img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   BOTÃO VOLTAR
+===================================================== */
+
+.back-button {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    z-index: 10;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    color: #333333;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.back-button:active {
+    transform: scale(0.9);
+}
+
+
+.back-button:hover {
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   INDICADORES DA IMAGEM
+===================================================== */
+
+.destination-dots {
+    position: absolute;
+
+    bottom: 18px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 5px;
+
+    z-index: 5;
+}
+
+
+.dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.55);
+}
+
+
+.dot.active {
+    width: 18px;
+
+    border-radius: 10px;
+
+    background-color: #ffffff;
+}
+
+
+/* =====================================================
+   INFORMAÇÕES DO DESTINO
+===================================================== */
+
+.destination-details {
+    flex: 1;
+
+    padding: 24px 22px 20px;
+
+    overflow-y: auto;
+}
+
+
+.destination-details::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Título */
+
+.destination-details h1 {
+    margin: 0 0 6px;
+
+    color: #222222;
+
+    font-size: 25px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* Localização */
+
+.destination-location {
+    margin: 0 0 18px;
+
+    color: #8b8b8b;
+
+    font-size: 12px;
+}
+
+
+/* Descrição */
+
+#destination-description {
+    margin: 0 0 18px;
+
+    color: #777777;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   AVALIAÇÃO
+===================================================== */
+
+.rating {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+}
+
+
+.rating span {
+    color: #f3b942;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+}
+
+
+.rating small {
+    color: #999999;
+
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   PARTE INFERIOR / PREÇO
+===================================================== */
+
+.destination-bottom {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-top: auto;
+}
+
+
+.price-container {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.price-container strong {
+    color: #222222;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.price-container small {
+    margin-top: 3px;
+
+    color: #999999;
+
+    font-size: 9px;
+}
+
+
+/* Botão roteiro */
+
+.route-button {
+    border: none;
+
+    padding: 13px 17px;
+
+    border-radius: 14px;
+
+    background-color: #2f2f2f;
+
+    color: #ffffff;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.route-button:active {
+    transform: scale(0.95);
+}
+
+
+.route-button:hover {
+    background-color: #111111;
+}
+
+
+
+/* =====================================================
+   TELA DE PAÍS
+===================================================== */
+
+#screen-country {
+    background-color: #111111;
+
+    overflow: hidden;
+}
+
+
+.country-page {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    background-size: cover;
+    background-position: center;
+
+    transition:
+        background-image 0.3s ease;
+}
+
+
+/* Escurecimento da imagem */
+
+.country-page::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.15) 20%,
+            rgba(0, 0, 0, 0.78) 100%
+        );
+
+    z-index: 1;
+}
+
+
+/* =====================================================
+   BOTÃO VOLTAR DO PAÍS
+===================================================== */
+
+.country-back {
+    top: 20px;
+    left: 18px;
+
+    background: rgba(255, 255, 255, 0.82);
+}
+
+
+/* =====================================================
+   TEXTO DO PAÍS
+===================================================== */
+
+.country-content {
+    position: relative;
+
+    z-index: 2;
+
+    padding: 0 28px 100px;
+
+    color: #ffffff;
+}
+
+
+.country-content h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 42px;
+    font-weight: 800;
+
+    line-height: 0.95;
+
+    letter-spacing: -1px;
+}
+
+
+.country-content h1 span {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 42px;
+    font-weight: 800;
+}
+
+
+.country-content p {
+    max-width: 260px;
+
+    margin: 18px 0 0;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   INDICADORES DO PAÍS
+===================================================== */
+
+.country-dots {
+    position: absolute;
+
+    bottom: 35px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 3;
+
+    display: flex;
+
+    gap: 5px;
+}
+
+
+.country-dots .dot {
+    background-color: rgba(255, 255, 255, 0.45);
+}
+
+
+.country-dots .dot.active {
+    background-color: #ffffff;
+}
+
+
+/* =====================================================
+   AJUSTES PARA TELAS MENORES
+===================================================== */
+
+@media (max-height: 700px) {
+
+    .destination-hero {
+        height: 43%;
+    }
+
+    .destination-details {
+        padding-top: 18px;
+    }
+
+    .destination-details h1 {
+        font-size: 22px;
+    }
+
+    .country-content {
+        padding-bottom: 85px;
+    }
+
+    .country-content h1,
+    .country-content h1 span {
+        font-size: 36px;
+    }
+
+}
+
+
+/* =====================================================
+   AJUSTES PARA TELAS MAIORES
+===================================================== */
+
+@media (min-height: 850px) {
+
+    .destination-hero {
+        height: 50%;
+    }
+
+}
