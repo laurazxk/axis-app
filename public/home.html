@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Axis - Home</title>
+
+
+    <!-- Fonte -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/estilo.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="app-container">
+
+
+    <!-- ==================================================
+         HOME
+    =================================================== -->
+
+    <div
+        id="screen-home"
+        class="screen active"
+    >
+
+
+        <!-- CABEÇALHO -->
+
+        <header class="home-header">
+
+
+            <button
+                class="menu-button"
+                aria-label="Menu"
+            >
+                ☰
+            </button>
+
+
+            <h2>
+                Home
+            </h2>
+
+
+            <button
+                class="profile-button"
+                aria-label="Perfil"
+            >
+
+                <img
+                    src="imagens/perfil.png"
+                    alt="Perfil"
+                >
+
+            </button>
+
+
+        </header>
+
+
+
+        <!-- CONTEÚDO -->
+
+        <main class="home-content">
+
+
+            <h1>
+                Olá!
+            </h1>
+
+
+
+            <!-- BUSCA -->
+
+            <div class="destination-search">
+
+                <span>
+                    Qual seu destino?
+                </span>
+
+                <span class="search-icon">
+                    ⌕
+                </span>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 DESTINOS POPULARES
+            =================================================== -->
+
+            <section class="home-section">
+
+
+                <h2>
+                    Destinos populares
+                </h2>
+
+
+                <div class="category-buttons">
+
+
+                    <button
+                        class="category active"
+                    >
+                        Tudo
+                    </button>
+
+
+                    <button
+                        class="category"
+                    >
+                        Cidades
+                    </button>
+
+
+                    <button
+                        class="category"
+                    >
+                        Natureza
+                    </button>
+
+
+                </div>
+
+
+
+                <div class="cards-container">
+
+
+                    <!-- OSAKA -->
+
+                    <div
+                        class="destination-card"
+                        onclick="openDestination('osaka')"
+                    >
+
+                        <img
+                            src="imagens/osaka.png"
+                            alt="Osaka"
+                        >
+
+                        <div class="card-info">
+
+                            <strong>
+                                Osaka
+                            </strong>
+
+                            <span>
+                                Japão
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SANTORINI -->
+
+                    <div
+                        class="destination-card"
+                        onclick="openDestination('santorini')"
+                    >
+
+                        <img
+                            src="imagens/santorini.png"
+                            alt="Santorini"
+                        >
+
+                        <div class="card-info">
+
+                            <strong>
+                                Santorini
+                            </strong>
+
+                            <span>
+                                Grécia
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PARIS -->
+
+                    <div
+                        class="destination-card"
+                        onclick="openDestination('paris')"
+                    >
+
+                        <img
+                            src="imagens/paris.png"
+                            alt="Paris"
+                        >
+
+                        <div class="card-info">
+
+                            <strong>
+                                Paris
+                            </strong>
+
+                            <span>
+                                França
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================================
+                 PAÍSES POPULARES
+            =================================================== -->
+
+            <section class="home-section">
+
+
+                <h2>
+                    Países populares
+                </h2>
+
+
+                <div class="cards-container">
+
+
+                    <!-- FRANÇA -->
+
+                    <div
+                        class="destination-card"
+                        onclick="openCountry('franca')"
+                    >
+
+                        <img
+                            src="imagens/franca.png"
+                            alt="França"
+                        >
+
+                        <div class="card-info">
+
+                            <strong>
+                                França
+                            </strong>
+
+                            <span>
+                                Europa
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- JAPÃO -->
+
+                    <div
+                        class="destination-card"
+                        onclick="openCountry('japao')"
+                    >
+
+                        <img
+                            src="imagens/japao.png"
+                            alt="Japão"
+                        >
+
+                        <div class="card-info">
+
+                            <strong>
+                                Japão
+                            </strong>
+
+                            <span>
+                                Ásia
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ITÁLIA -->
+
+                    <div
+                        class="destination-card"
+                        onclick="openCountry('italia')"
+                    >
+
+                        <img
+                            src="imagens/italia.png"
+                            alt="Itália"
+                        >
+
+                        <div class="card-info">
+
+                            <strong>
+                                Itália
+                            </strong>
+
+                            <span>
+                                Europa
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+
+
+        <!-- ==================================================
+             NAVEGAÇÃO INFERIOR
+        =================================================== -->
+
+        <nav class="bottom-navigation">
+
+
+            <button
+                class="nav-item"
+                aria-label="Viagens"
+            >
+
+                <span class="nav-icon">
+                    🧳
+                </span>
+
+                <small>
+                    Viagens
+                </small>
+
+            </button>
+
+
+
+            <button
+                class="nav-item active"
+                onclick="changeScreen('screen-home')"
+                aria-label="Home"
+            >
+
+                <span class="nav-icon">
+                    ⌂
+                </span>
+
+                <small>
+                    Home
+                </small>
+
+            </button>
+
+
+
+            <button
+                class="nav-item"
+                aria-label="Favoritos"
+            >
+
+                <span class="nav-icon">
+                    ♡
+                </span>
+
+                <small>
+                    Favoritos
+                </small>
+
+            </button>
+
+
+
+            <button
+                class="nav-item"
+                aria-label="Perfil"
+            >
+
+                <span class="nav-icon">
+                    ♙
+                </span>
+
+                <small>
+                    Perfil
+                </small>
+
+            </button>
+
+
+        </nav>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         TELA DE DESTINO
+         Segunda imagem do protótipo
+    =================================================== -->
+
+    <div
+        id="screen-destination"
+        class="screen"
+    >
+
+
+        <div class="destination-page">
+
+
+            <!-- IMAGEM DO DESTINO -->
+
+            <div class="destination-hero">
+
+
+                <!-- VOLTAR -->
+
+                <button
+                    class="back-button"
+                    onclick="changeScreen('screen-home')"
+                >
+                    ←
+                </button>
+
+
+                <img
+                    id="destination-image"
+                    src="imagens/osaka.png"
+                    alt="Destino"
+                >
+
+
+                <!-- PONTOS -->
+
+                <div class="destination-dots">
+
+                    <span class="dot active"></span>
+
+                    <span class="dot"></span>
+
+                    <span class="dot"></span>
+
+                    <span class="dot"></span>
+
+                    <span class="dot"></span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- INFORMAÇÕES -->
+
+            <div class="destination-details">
+
+
+                <h1 id="destination-title">
+                    Castelo de Osaka
+                </h1>
+
+
+                <p
+                    id="destination-location"
+                    class="destination-location"
+                >
+                    Osaka, Japão
+                </p>
+
+
+                <p id="destination-description">
+
+                    Explore um dos símbolos do Japão numa visita
+                    guiada ao Castelo de Osaka. Percorra o seu
+                    interior, atravesse portas antigas e desfrute
+                    de vistas espetaculares.
+
+                </p>
+
+
+
+                <!-- AVALIAÇÃO -->
+
+                <div class="rating">
+
+                    <span>
+                        ★★★★☆
+                    </span>
+
+                    <small>
+                        4.5 Avaliação
+                    </small>
+
+                </div>
+
+
+
+                <!-- PREÇO -->
+
+                <div class="destination-bottom">
+
+
+                    <div class="price-container">
+
+                        <strong id="destination-price">
+                            R$300,00
+                        </strong>
+
+                        <small>
+                            Por Pessoa
+                        </small>
+
+                    </div>
+
+
+                    <button class="route-button">
+
+                        Adicionar ao roteiro
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         TELA DE PAÍS
+         Terceira imagem do protótipo
+    =================================================== -->
+
+    <div
+        id="screen-country"
+        class="screen"
+    >
+
+
+        <div
+            id="country-page"
+            class="country-page"
+        >
+
+
+            <!-- VOLTAR -->
+
+            <button
+                class="back-button country-back"
+                onclick="changeScreen('screen-home')"
+            >
+                ←
+            </button>
+
+
+
+            <!-- TEXTO -->
+
+            <div class="country-content">
+
+
+                <h1 id="country-title">
+
+                    VISITE O
+                    <span>JAPÃO</span>
+
+                </h1>
+
+
+                <p id="country-description">
+
+                    descubra o futuro e a tradição
+                    em um só lugar
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- PONTOS -->
+
+            <div class="country-dots">
+
+                <span class="dot active"></span>
+
+                <span class="dot"></span>
+
+                <span class="dot"></span>
+
+                <span class="dot"></span>
+
+                <span class="dot"></span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ==================================================
+     JAVASCRIPT
+=================================================== -->
+
+<script>
+
+
+    /* ==================================================
+       TROCAR DE TELA
+    =================================================== */
+
+    function changeScreen(screenId) {
+
+
+        document
+            .querySelectorAll('.screen')
+            .forEach(screen => {
+
+                screen.classList.remove('active');
+
+            });
+
+
+        const target =
+            document.getElementById(screenId);
+
+
+        if (target) {
+
+            target.classList.add('active');
+
+        }
+
+    }
+
+
+
+    /* ==================================================
+       DESTINOS
+    =================================================== */
+
+    const destinations = {
+
+
+        osaka: {
+
+            title: "Castelo de Osaka",
+
+            location: "Osaka, Japão",
+
+            image: "imagens/osaka.png",
+
+            description:
+                "Explore um dos símbolos do Japão numa visita guiada ao Castelo de Osaka. Percorra o seu interior, atravesse portas antigas e desfrute de vistas espetaculares.",
+
+            price: "R$300,00"
+
+        },
+
+
+        santorini: {
+
+            title: "Santorini",
+
+            location: "Santorini, Grécia",
+
+            image: "imagens/santorini.png",
+
+            description:
+                "Descubra as paisagens de Santorini, suas casas brancas, o mar azul e os incríveis pôr do sol da ilha.",
+
+            price: "R$450,00"
+
+        },
+
+
+        paris: {
+
+            title: "Paris",
+
+            location: "Paris, França",
+
+            image: "imagens/paris.png",
+
+            description:
+                "Conheça Paris e explore seus monumentos, sua arquitetura, sua cultura e os lugares mais famosos da cidade.",
+
+            price: "R$400,00"
+
+        }
+
+    };
+
+
+
+    /* ==================================================
+       ABRIR DESTINO
+    =================================================== */
+
+    function openDestination(id) {
+
+
+        const destination =
+            destinations[id];
+
+
+        if (!destination) {
+
+            return;
+
+        }
+
+
+        document
+            .getElementById("destination-title")
+            .textContent =
+            destination.title;
+
+
+        document
+            .getElementById("destination-location")
+            .textContent =
+            destination.location;
+
+
+        document
+            .getElementById("destination-description")
+            .textContent =
+            destination.description;
+
+
+        document
+            .getElementById("destination-price")
+            .textContent =
+            destination.price;
+
+
+        document
+            .getElementById("destination-image")
+            .src =
+            destination.image;
+
+
+        document
+            .getElementById("destination-image")
+            .alt =
+            destination.title;
+
+
+        changeScreen("screen-destination");
+
+    }
+
+
+
+    /* ==================================================
+       PAÍSES
+    =================================================== */
+
+    const countries = {
+
+
+        franca: {
+
+            title: "VISITE A",
+
+            country: "FRANÇA",
+
+            description:
+                "descubra a arte, a cultura e a história em um só lugar",
+
+            image: "imagens/franca.png"
+
+        },
+
+
+        japao: {
+
+            title: "VISITE O",
+
+            country: "JAPÃO",
+
+            description:
+                "descubra o futuro e a tradição em um só lugar",
+
+            image: "imagens/japao.png"
+
+        },
+
+
+        italia: {
+
+            title: "VISITE A",
+
+            country: "ITÁLIA",
+
+            description:
+                "descubra história, cultura e sabores em um só lugar",
+
+            image: "imagens/italia.png"
+
+        }
+
+    };
+
+
+
+    /* ==================================================
+       ABRIR PAÍS
+    =================================================== */
+
+    function openCountry(id) {
+
+
+        const country =
+            countries[id];
+
+
+        if (!country) {
+
+            return;
+
+        }
+
+
+        document
+            .getElementById("country-title")
+            .innerHTML =
+            country.title +
+            "<span>" +
+            country.country +
+            "</span>";
+
+
+        document
+            .getElementById("country-description")
+            .textContent =
+            country.description;
+
+
+        document
+            .getElementById("country-page")
+            .style.backgroundImage =
+            `url("${country.image}")`;
+
+
+        changeScreen("screen-country");
+
+    }
+
+
+</script>
+
+
+</body>
+
+</html>
