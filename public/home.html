@@ -13,7 +13,9 @@
     <title>Axis - Home</title>
 
 
-    <!-- Fonte -->
+    <!-- ==============================
+         FONTES
+    =============================== -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -26,6 +28,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
         rel="stylesheet"
+    >
+
+
+    <!-- ÍCONES -->
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     >
 
 
@@ -59,7 +69,6 @@
 
         <header class="home-header">
 
-
             <button
                 class="menu-button"
                 aria-label="Menu"
@@ -85,12 +94,13 @@
 
             </button>
 
-
         </header>
 
 
 
-        <!-- CONTEÚDO -->
+        <!-- ==================================================
+             CONTEÚDO
+        =================================================== -->
 
         <main class="home-content">
 
@@ -98,7 +108,6 @@
             <h1>
                 Olá!
             </h1>
-
 
 
             <!-- BUSCA -->
@@ -116,7 +125,6 @@
             </div>
 
 
-
             <!-- ==================================================
                  DESTINOS POPULARES
             =================================================== -->
@@ -129,33 +137,26 @@
                 </h2>
 
 
+                <!-- FILTROS -->
+
                 <div class="category-buttons">
 
-
-                    <button
-                        class="category active"
-                    >
+                    <button class="category active">
                         Tudo
                     </button>
 
-
-                    <button
-                        class="category"
-                    >
+                    <button class="category">
                         Cidades
                     </button>
 
-
-                    <button
-                        class="category"
-                    >
+                    <button class="category">
                         Natureza
                     </button>
-
 
                 </div>
 
 
+                <!-- CARDS -->
 
                 <div class="cards-container">
 
@@ -187,7 +188,6 @@
                     </div>
 
 
-
                     <!-- SANTORINI -->
 
                     <div
@@ -213,7 +213,6 @@
                         </div>
 
                     </div>
-
 
 
                     <!-- PARIS -->
@@ -246,7 +245,6 @@
                 </div>
 
             </section>
-
 
 
             <!-- ==================================================
@@ -291,7 +289,6 @@
                     </div>
 
 
-
                     <!-- JAPÃO -->
 
                     <div
@@ -317,7 +314,6 @@
                         </div>
 
                     </div>
-
 
 
                     <!-- ITÁLIA -->
@@ -368,8 +364,8 @@
                 aria-label="Viagens"
             >
 
-                <span class="nav-icon">
-                    🧳
+                <span class="material-symbols-outlined">
+                    travel_luggage_and_bags
                 </span>
 
                 <small>
@@ -379,15 +375,13 @@
             </button>
 
 
-
             <button
                 class="nav-item active"
-                onclick="changeScreen('screen-home')"
                 aria-label="Home"
             >
 
-                <span class="nav-icon">
-                    ⌂
+                <span class="material-symbols-outlined">
+                    home
                 </span>
 
                 <small>
@@ -397,14 +391,13 @@
             </button>
 
 
-
             <button
                 class="nav-item"
                 aria-label="Favoritos"
             >
 
-                <span class="nav-icon">
-                    ♡
+                <span class="material-symbols-outlined">
+                    attach_money
                 </span>
 
                 <small>
@@ -414,14 +407,13 @@
             </button>
 
 
-
             <button
                 class="nav-item"
                 aria-label="Perfil"
             >
 
-                <span class="nav-icon">
-                    ♙
+                <span class="material-symbols-outlined">
+                    person
                 </span>
 
                 <small>
@@ -440,7 +432,6 @@
 
     <!-- ==================================================
          TELA DE DESTINO
-         Segunda imagem do protótipo
     =================================================== -->
 
     <div
@@ -448,16 +439,11 @@
         class="screen"
     >
 
-
         <div class="destination-page">
 
 
-            <!-- IMAGEM DO DESTINO -->
-
             <div class="destination-hero">
 
-
-                <!-- VOLTAR -->
 
                 <button
                     class="back-button"
@@ -474,28 +460,18 @@
                 >
 
 
-                <!-- PONTOS -->
-
                 <div class="destination-dots">
 
                     <span class="dot active"></span>
-
                     <span class="dot"></span>
-
                     <span class="dot"></span>
-
                     <span class="dot"></span>
-
                     <span class="dot"></span>
 
                 </div>
 
-
             </div>
 
-
-
-            <!-- INFORMAÇÕES -->
 
             <div class="destination-details">
 
@@ -523,9 +499,6 @@
                 </p>
 
 
-
-                <!-- AVALIAÇÃO -->
-
                 <div class="rating">
 
                     <span>
@@ -539,11 +512,7 @@
                 </div>
 
 
-
-                <!-- PREÇO -->
-
                 <div class="destination-bottom">
-
 
                     <div class="price-container">
 
@@ -559,20 +528,15 @@
 
 
                     <button class="route-button">
-
                         Adicionar ao roteiro
-
                     </button>
-
 
                 </div>
 
 
             </div>
 
-
         </div>
-
 
     </div>
 
@@ -580,7 +544,6 @@
 
     <!-- ==================================================
          TELA DE PAÍS
-         Terceira imagem do protótipo
     =================================================== -->
 
     <div
@@ -588,14 +551,11 @@
         class="screen"
     >
 
-
         <div
             id="country-page"
             class="country-page"
         >
 
-
-            <!-- VOLTAR -->
 
             <button
                 class="back-button country-back"
@@ -605,16 +565,15 @@
             </button>
 
 
-
-            <!-- TEXTO -->
-
             <div class="country-content">
-
 
                 <h1 id="country-title">
 
                     VISITE O
-                    <span>JAPÃO</span>
+
+                    <span>
+                        JAPÃO
+                    </span>
 
                 </h1>
 
@@ -626,30 +585,21 @@
 
                 </p>
 
-
             </div>
 
-
-
-            <!-- PONTOS -->
 
             <div class="country-dots">
 
                 <span class="dot active"></span>
-
                 <span class="dot"></span>
-
                 <span class="dot"></span>
-
                 <span class="dot"></span>
-
                 <span class="dot"></span>
 
             </div>
 
 
         </div>
-
 
     </div>
 
@@ -660,258 +610,247 @@
 
 <!-- ==================================================
      JAVASCRIPT
-=================================================== -->
+================================================== -->
 
 <script>
 
 
-    /* ==================================================
-       TROCAR DE TELA
-    =================================================== */
+/* ==================================================
+   TROCAR DE TELA
+================================================== */
 
-    function changeScreen(screenId) {
+function changeScreen(screenId) {
 
+    document
+        .querySelectorAll('.screen')
+        .forEach(screen => {
 
-        document
-            .querySelectorAll('.screen')
-            .forEach(screen => {
+            screen.classList.remove('active');
 
-                screen.classList.remove('active');
-
-            });
-
-
-        const target =
-            document.getElementById(screenId);
+        });
 
 
-        if (target) {
+    const target =
+        document.getElementById(screenId);
 
-            target.classList.add('active');
 
-        }
+    if (target) {
+
+        target.classList.add('active');
 
     }
 
-
-
-    /* ==================================================
-       DESTINOS
-    =================================================== */
-
-    const destinations = {
-
-
-        osaka: {
-
-            title: "Castelo de Osaka",
-
-            location: "Osaka, Japão",
-
-            image: "imagens/osaka.png",
-
-            description:
-                "Explore um dos símbolos do Japão numa visita guiada ao Castelo de Osaka. Percorra o seu interior, atravesse portas antigas e desfrute de vistas espetaculares.",
-
-            price: "R$300,00"
-
-        },
-
-
-        santorini: {
-
-            title: "Santorini",
-
-            location: "Santorini, Grécia",
-
-            image: "imagens/santorini.png",
-
-            description:
-                "Descubra as paisagens de Santorini, suas casas brancas, o mar azul e os incríveis pôr do sol da ilha.",
-
-            price: "R$450,00"
-
-        },
-
-
-        paris: {
-
-            title: "Paris",
-
-            location: "Paris, França",
-
-            image: "imagens/paris.png",
-
-            description:
-                "Conheça Paris e explore seus monumentos, sua arquitetura, sua cultura e os lugares mais famosos da cidade.",
-
-            price: "R$400,00"
-
-        }
-
-    };
+}
 
 
 
-    /* ==================================================
-       ABRIR DESTINO
-    =================================================== */
+/* ==================================================
+   DESTINOS
+================================================== */
 
-    function openDestination(id) {
+const destinations = {
 
+    osaka: {
 
-        const destination =
-            destinations[id];
+        title: "Castelo de Osaka",
 
+        location: "Osaka, Japão",
 
-        if (!destination) {
+        image: "imagens/osaka.png",
 
-            return;
+        description:
+            "Explore um dos símbolos do Japão numa visita guiada ao Castelo de Osaka. Percorra o seu interior, atravesse portas antigas e desfrute de vistas espetaculares.",
 
-        }
+        price: "R$300,00"
 
-
-        document
-            .getElementById("destination-title")
-            .textContent =
-            destination.title;
+    },
 
 
-        document
-            .getElementById("destination-location")
-            .textContent =
-            destination.location;
+    santorini: {
+
+        title: "Santorini",
+
+        location: "Santorini, Grécia",
+
+        image: "imagens/santorini.png",
+
+        description:
+            "Descubra as paisagens de Santorini, suas casas brancas, o mar azul e os incríveis pôr do sol da ilha.",
+
+        price: "R$450,00"
+
+    },
 
 
-        document
-            .getElementById("destination-description")
-            .textContent =
-            destination.description;
+    paris: {
 
+        title: "Paris",
 
-        document
-            .getElementById("destination-price")
-            .textContent =
-            destination.price;
+        location: "Paris, França",
 
+        image: "imagens/paris.png",
 
-        document
-            .getElementById("destination-image")
-            .src =
-            destination.image;
+        description:
+            "Conheça Paris e explore seus monumentos, sua arquitetura, sua cultura e os lugares mais famosos da cidade.",
 
-
-        document
-            .getElementById("destination-image")
-            .alt =
-            destination.title;
-
-
-        changeScreen("screen-destination");
+        price: "R$400,00"
 
     }
 
-
-
-    /* ==================================================
-       PAÍSES
-    =================================================== */
-
-    const countries = {
-
-
-        franca: {
-
-            title: "VISITE A",
-
-            country: "FRANÇA",
-
-            description:
-                "descubra a arte, a cultura e a história em um só lugar",
-
-            image: "imagens/franca.png"
-
-        },
-
-
-        japao: {
-
-            title: "VISITE O",
-
-            country: "JAPÃO",
-
-            description:
-                "descubra o futuro e a tradição em um só lugar",
-
-            image: "imagens/japao.png"
-
-        },
-
-
-        italia: {
-
-            title: "VISITE A",
-
-            country: "ITÁLIA",
-
-            description:
-                "descubra história, cultura e sabores em um só lugar",
-
-            image: "imagens/italia.png"
-
-        }
-
-    };
+};
 
 
 
-    /* ==================================================
-       ABRIR PAÍS
-    =================================================== */
+/* ==================================================
+   ABRIR DESTINO
+================================================== */
 
-    function openCountry(id) {
+function openDestination(id) {
 
-
-        const country =
-            countries[id];
-
-
-        if (!country) {
-
-            return;
-
-        }
+    const destination =
+        destinations[id];
 
 
-        document
-            .getElementById("country-title")
-            .innerHTML =
+    if (!destination) {
+        return;
+    }
+
+
+    document
+        .getElementById("destination-title")
+        .textContent =
+        destination.title;
+
+
+    document
+        .getElementById("destination-location")
+        .textContent =
+        destination.location;
+
+
+    document
+        .getElementById("destination-description")
+        .textContent =
+        destination.description;
+
+
+    document
+        .getElementById("destination-price")
+        .textContent =
+        destination.price;
+
+
+    document
+        .getElementById("destination-image")
+        .src =
+        destination.image;
+
+
+    document
+        .getElementById("destination-image")
+        .alt =
+        destination.title;
+
+
+    changeScreen("screen-destination");
+
+}
+
+
+
+/* ==================================================
+   PAÍSES
+================================================== */
+
+const countries = {
+
+    franca: {
+
+        title: "VISITE A",
+
+        country: "FRANÇA",
+
+        description:
+            "descubra a arte, a cultura e a história em um só lugar",
+
+        image: "imagens/franca.png"
+
+    },
+
+
+    japao: {
+
+        title: "VISITE O",
+
+        country: "JAPÃO",
+
+        description:
+            "descubra o futuro e a tradição em um só lugar",
+
+        image: "imagens/japao.png"
+
+    },
+
+
+    italia: {
+
+        title: "VISITE A",
+
+        country: "ITÁLIA",
+
+        description:
+            "descubra história, cultura e sabores em um só lugar",
+
+        image: "imagens/italia.png"
+
+    }
+
+};
+
+
+
+/* ==================================================
+   ABRIR PAÍS
+================================================== */
+
+function openCountry(id) {
+
+    const country =
+        countries[id];
+
+
+    if (!country) {
+        return;
+    }
+
+
+    document
+        .getElementById("country-title")
+        .innerHTML =
             country.title +
             "<span>" +
             country.country +
             "</span>";
 
 
-        document
-            .getElementById("country-description")
-            .textContent =
+    document
+        .getElementById("country-description")
+        .textContent =
             country.description;
 
 
-        document
-            .getElementById("country-page")
-            .style.backgroundImage =
+    document
+        .getElementById("country-page")
+        .style.backgroundImage =
             `url("${country.image}")`;
 
 
-        changeScreen("screen-country");
+    changeScreen("screen-country");
 
-    }
-
+}
 
 </script>
 
 
 </body>
-
 </html>
