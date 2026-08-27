@@ -5,248 +5,439 @@
     --btn-bg: #2b2b2b;
 }
 
+
+/* =====================================================
+   RESET
+===================================================== */
+
 * {
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
 
+
+html,
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
     background-color: #121212;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     min-height: 100vh;
 }
 
-/* Container que simula o celular */
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
 .app-container {
+
     width: 100vw;
     height: 100vh;
+
     max-width: 412px;
     max-height: 892px;
-    background-color: var(--bg-mobile);
+
+    background-color: #ffffff;
+
     position: relative;
+
     overflow: hidden;
-    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.8);
+
+    box-shadow:
+        0 24px 48px rgba(0, 0, 0, 0.8);
 }
+
 
 @media (min-width: 450px) {
+
     .app-container {
+
         border-radius: 40px;
+
         border: 12px solid #333333;
+
         height: 85vh;
+
     }
+
 }
 
-/* Estrutura de Telas */
+
+/* =====================================================
+   TELAS
+===================================================== */
+
 .screen {
+
     position: absolute;
+
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
+
     display: flex;
+
     flex-direction: column;
+
     opacity: 0;
+
     pointer-events: none;
-    transition: opacity 0.4s ease-in-out;
+
+    transition:
+        opacity 0.35s ease;
 }
+
 
 .screen.active {
+
     opacity: 1;
+
     pointer-events: auto;
+
 }
 
-/* TELA 1: SPLASH SCREEN */
+
+/* =====================================================
+   SPLASH
+===================================================== */
+
 #screen-splash {
+
     background-color: #ffffff;
+
     justify-content: center;
+
     align-items: center;
+
     cursor: pointer;
+
 }
+
 
 .logo-box {
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     text-align: center;
+
 }
+
 
 .real-logo {
+
     width: 180px;
+
     height: auto;
+
     object-fit: contain;
+
     margin-bottom: 12px;
+
 }
+
 
 .logo-title-text {
+
     font-size: 16px;
+
     font-weight: 700;
+
     letter-spacing: 6px;
+
     color: #111111;
+
     margin: 0;
+
     text-transform: uppercase;
+
     padding-left: 6px;
+
 }
+
 
 .splash-footer {
+
     position: absolute;
+
     bottom: 40px;
+
     font-size: 12px;
+
     color: var(--text-muted);
-    animation: pulse 1.5s infinite;
+
 }
 
-/* TELA 2: DESCUBRA */
+
+/* =====================================================
+   DESCUBRIR
+===================================================== */
+
 #screen-discover {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.6) 100%), 
-     url('https://cdn.cosmos.so/13d8354b-8e00-4a61-8327-33902d5cf308?format=webp');
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.1) 40%,
+            rgba(0,0,0,0.6) 100%
+        ),
+        url('https://cdn.cosmos.so/13d8354b-8e00-4a61-8327-33902d5cf308?format=webp');
+
     background-size: cover;
+
     background-position: center;
+
     justify-content: flex-end;
+
 }
+
 
 .bottom-card {
+
     background-color: #ffffff;
-    border-radius: 32px 32px 0 0;
-    padding: 40px 30px;
+
+    border-radius:
+        32px 32px 0 0;
+
+    padding:
+        40px 30px;
+
     text-align: center;
-    box-shadow: 0 -10px 30px rgba(0,0,0,0.15);
+
+    box-shadow:
+        0 -10px 30px rgba(0,0,0,0.15);
+
 }
+
 
 .bottom-card h2 {
+
     font-size: 24px;
+
     font-weight: 700;
+
     color: var(--text-dark);
+
     line-height: 1.3;
-    margin: 0 0 16px 0;
+
+    margin:
+        0 0 16px 0;
+
 }
+
 
 .bottom-card p {
+
     font-size: 14px;
+
     color: var(--text-muted);
+
     line-height: 1.6;
-    margin: 0 0 32px 0;
+
+    margin:
+        0 0 32px 0;
+
 }
+
 
 .btn-main {
-    background-color: var(--btn-bg);
+
+    background-color:
+        var(--btn-bg);
+
     color: #ffffff;
+
     border: none;
-    padding: 16px 0;
+
+    padding:
+        16px 0;
+
     width: 100%;
+
     border-radius: 16px;
+
     font-size: 16px;
+
     font-weight: 600;
+
     cursor: pointer;
-    transition: background 0.2s;
+
 }
+
 
 .btn-main:hover {
+
     background-color: #111111;
+
 }
 
-/* TELA 3: PLANEJE */
-#screen-plan, #screen-plan-2, #screen-plan-3, #screen-plan-4 {
+
+/* =====================================================
+   TELAS PLANEJE
+===================================================== */
+
+#screen-plan,
+#screen-plan-2,
+#screen-plan-3,
+#screen-plan-4 {
+
     background-color: #ffffff;
+
     display: flex;
+
     flex-direction: column;
-    justify-content: space-evenly; /* Distribui os espaços igualmente igual ao protótipo */
+
+    justify-content: space-evenly;
+
     align-items: center;
-    padding: 40px 30px; /* Margem interna para evitar que encoste nas bordas do celular */
-    box-sizing: border-box;
+
+    padding:
+        40px 30px;
+
 }
 
-/* Nova estrutura interna para manter texto e botão próximos, conforme a imagem */
-.plan-content-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px; /* Distância exata entre o bloco de texto e o botão de seta */
-    width: 100%;
-}
 
 .plan-illustration {
-    width: 300px; /* Tamanho proporcional para preencher o topo da tela */
+
+    width: 300px;
+
     height: auto;
+
     object-fit: contain;
+
 }
+
 
 .text-group {
+
     text-align: center;
-    padding: 0 10px;
+
+    padding:
+        0 10px;
+
 }
+
 
 .text-group h2 {
+
     font-size: 24px;
+
     font-weight: 700;
+
     color: var(--text-dark);
+
     line-height: 1.3;
-    margin: 0 0 12px 0;
+
+    margin:
+        0 0 12px 0;
+
 }
+
 
 .text-group p {
+
     font-size: 14px;
+
     color: var(--text-muted);
+
     line-height: 1.5;
+
     margin: 0;
+
 }
+
 
 .btn-round {
+
     width: 60px;
+
     height: 60px;
+
     border-radius: 50%;
-    background-color: #555555; /* Tom de cinza escuro idêntico ao botão do print */
+
+    background-color: #555555;
+
     color: #ffffff;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     font-size: 24px;
+
     border: none;
+
     cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
+
 }
 
-.btn-round:hover {
-    transform: scale(1.05);
-    background-color: #444444;
-}
+
 /* =====================================================
    HOME
 ===================================================== */
 
 #screen-home {
+
     background-color: #f7f7f7;
+
     color: #222222;
+
     overflow: hidden;
+
 }
 
 
 /* =====================================================
-   CABEÇALHO
+   CABEÇALHO DA HOME
 ===================================================== */
 
 .home-header {
+
     height: 62px;
+
     min-height: 62px;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
 
     align-items: center;
 
-    padding: 0 18px;
+    padding:
+        0 18px;
+
 }
 
 
-/* Botão menu */
-
 .menu-button {
+
     justify-self: start;
 
     border: none;
+
     background: transparent;
 
     color: #7d8798;
@@ -254,12 +445,12 @@ body {
     font-size: 20px;
 
     cursor: pointer;
+
 }
 
 
-/* Título Home */
-
 .home-header h2 {
+
     justify-self: center;
 
     margin: 0;
@@ -267,21 +458,24 @@ body {
     color: #7d8798;
 
     font-size: 15px;
+
     font-weight: 600;
+
 }
 
 
-/* Botão perfil */
-
 .profile-button {
+
     justify-self: end;
 
     width: 34px;
+
     height: 34px;
 
     padding: 0;
 
     border: none;
+
     background: transparent;
 
     border-radius: 50%;
@@ -289,61 +483,88 @@ body {
     overflow: hidden;
 
     cursor: pointer;
+
 }
 
+
 .profile-button img {
+
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
+
 }
 
 
 /* =====================================================
-   CONTEÚDO DA HOME
+   CONTEÚDO HOME
 ===================================================== */
 
 .home-content {
+
     flex: 1;
 
     overflow-y: auto;
+
     overflow-x: hidden;
 
-    padding: 3px 14px 85px;
+    padding:
+        3px 14px 85px;
+
+    -webkit-overflow-scrolling:
+        touch;
+
 }
+
 
 .home-content::-webkit-scrollbar {
+
     display: none;
+
 }
 
 
-/* Saudação */
+/* =====================================================
+   SAUDAÇÃO
+===================================================== */
 
 .home-content > h1 {
-    margin: 0 7px 16px;
+
+    margin:
+        0 7px 16px;
 
     color: #303030;
 
     font-size: 23px;
+
     font-weight: 700;
+
 }
 
 
 /* =====================================================
-   BARRA "QUAL SEU DESTINO?"
+   BUSCA
 ===================================================== */
 
 .destination-search {
-    width: calc(100% - 4px);
+
+    width:
+        calc(100% - 4px);
+
     height: 43px;
 
-    margin: 0 2px 30px;
+    margin:
+        0 2px 30px;
 
-    padding: 0 14px;
+    padding:
+        0 14px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     background-color: #ffffff;
@@ -359,16 +580,15 @@ body {
 
     cursor: pointer;
 
-    transition: transform 0.2s ease;
 }
 
-.destination-search:active {
-    transform: scale(0.98);
-}
 
 .search-icon {
+
     color: #4d4d4d;
+
     font-size: 19px;
+
 }
 
 
@@ -377,16 +597,23 @@ body {
 ===================================================== */
 
 .home-section {
+
     margin-bottom: 23px;
+
 }
 
+
 .home-section > h2 {
-    margin: 0 7px 10px;
+
+    margin:
+        0 7px 10px;
 
     color: #8792a5;
 
     font-size: 15px;
+
     font-weight: 600;
+
 }
 
 
@@ -395,23 +622,32 @@ body {
 ===================================================== */
 
 .category-buttons {
+
     display: flex;
 
     gap: 6px;
 
-    margin: 0 7px 12px;
+    margin:
+        0 7px 12px;
 
     overflow-x: auto;
+
 }
+
 
 .category-buttons::-webkit-scrollbar {
+
     display: none;
+
 }
 
+
 .category {
+
     flex-shrink: 0;
 
-    padding: 5px 10px;
+    padding:
+        5px 10px;
 
     border: none;
 
@@ -421,43 +657,62 @@ body {
 
     color: #555555;
 
-    font-family: 'Inter', sans-serif;
+    font-family:
+        'Inter',
+        sans-serif;
 
     font-size: 8px;
 
     cursor: pointer;
+
 }
 
+
 .category.active {
+
     background-color: #333333;
+
     color: #ffffff;
+
 }
 
 
 /* =====================================================
-   CARDS DOS DESTINOS
+   CARDS
 ===================================================== */
 
 .cards-container {
+
     display: flex;
 
     gap: 12px;
 
-    padding: 2px 7px 8px;
+    padding:
+        2px 7px 8px;
 
     overflow-x: auto;
+
     overflow-y: hidden;
 
-    scroll-snap-type: x mandatory;
+    scroll-snap-type:
+        x mandatory;
+
 }
 
+
 .cards-container::-webkit-scrollbar {
+
     display: none;
+
 }
 
 
 .destination-card {
-    flex: 0 0 101px;
+
+    flex:
+        0 0 101px;
+
+    min-width: 101px;
 
     background-color: #ffffff;
 
@@ -472,29 +727,51 @@ body {
     box-shadow:
         0 3px 9px rgba(0, 0, 0, 0.14);
 
-    transition: transform 0.2s ease;
+    transition:
+        transform 0.2s ease;
+
 }
+
 
 .destination-card:active {
-    transform: scale(0.97);
+
+    transform:
+        scale(0.97);
+
 }
 
 
+/* =====================================================
+   IMAGENS DOS CARDS
+===================================================== */
+
 .destination-card img {
+
     display: block;
 
     width: 100%;
+
     height: 94px;
 
     object-fit: cover;
+
 }
 
+
+/* =====================================================
+   TEXTO DOS CARDS
+===================================================== */
 
 .card-info {
-    padding: 7px 8px 9px;
+
+    padding:
+        7px 8px 9px;
+
 }
 
+
 .card-info strong {
+
     display: block;
 
     margin-bottom: 3px;
@@ -502,27 +779,41 @@ body {
     color: #333333;
 
     font-size: 8px;
+
     font-weight: 600;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
 }
 
+
 .card-info span {
+
     display: block;
 
     color: #999999;
 
     font-size: 7px;
+
 }
 
 
 /* =====================================================
-   BARRA DE NAVEGAÇÃO GLASS
+   BARRA INFERIOR
 ===================================================== */
 
 .bottom-navigation {
+
     position: absolute;
 
     left: 16px;
+
     right: 16px;
+
     bottom: 12px;
 
     height: 56px;
@@ -530,33 +821,39 @@ body {
     display: flex;
 
     align-items: center;
+
     justify-content: space-around;
 
-    background: rgba(255, 255, 255, 0.38);
+    background:
+        rgba(255, 255, 255, 0.38);
 
-    border: 1px solid rgba(255, 255, 255, 0.55);
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.55);
 
     border-radius: 28px;
 
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
 
     box-shadow:
         0 8px 25px rgba(0, 0, 0, 0.15),
         inset 0 1px 1px rgba(255, 255, 255, 0.5);
 
     z-index: 20;
+
 }
 
 
-/* =====================================================
-   ITENS DA NAVEGAÇÃO
-===================================================== */
-
 .nav-item {
+
     position: relative;
 
     width: 50px;
+
     height: 48px;
 
     display: flex;
@@ -564,6 +861,7 @@ body {
     flex-direction: column;
 
     align-items: center;
+
     justify-content: center;
 
     gap: 2px;
@@ -572,165 +870,159 @@ body {
 
     background: transparent;
 
-    color: rgba(50, 50, 50, 0.65);
-
-    font-family: 'Inter', sans-serif;
+    color:
+        rgba(50, 50, 50, 0.65);
 
     cursor: pointer;
 
-    transition:
-        color 0.2s ease,
-        transform 0.2s ease;
 }
 
 
-/* Ícones */
+.nav-item .material-symbols-outlined {
 
-.nav-icon {
     position: relative;
-    z-index: 1;
 
-    display: flex;
+    z-index: 2;
 
-    align-items: center;
-    justify-content: center;
+    font-size: 19px;
 
-    width: 25px;
-    height: 25px;
-
-    font-size: 20px;
-
-    line-height: 1;
 }
 
-
-/* Texto */
 
 .nav-item small {
+
     position: relative;
-    z-index: 1;
+
+    z-index: 2;
 
     font-size: 7px;
+
     font-weight: 600;
 
-    line-height: 1;
 }
 
-
-/* Item selecionado */
 
 .nav-item.active {
+
     color: #202020;
+
 }
 
 
-/* Círculo de vidro do item selecionado */
-
 .nav-item.active::before {
+
     content: "";
 
     position: absolute;
 
     width: 42px;
+
     height: 42px;
 
     top: 3px;
+
     left: 50%;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%);
 
-    background: rgba(255, 255, 255, 0.28);
+    background:
+        rgba(255, 255, 255, 0.28);
 
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.35);
 
     border-radius: 50%;
 
     box-shadow:
         inset 0 1px 2px rgba(255, 255, 255, 0.6),
         0 2px 6px rgba(0, 0, 0, 0.08);
+
 }
 
 
-/* Efeito de toque */
-
-.nav-item:active {
-    transform: scale(0.9);
-}
 /* =====================================================
    TELA DE DESTINO
 ===================================================== */
 
 #screen-destination {
+
     background-color: #ffffff;
+
     overflow: hidden;
+
 }
 
 
-/* Página inteira do destino */
-
 .destination-page {
+
     width: 100%;
+
     height: 100%;
 
     display: flex;
+
     flex-direction: column;
 
-    background-color: #ffffff;
 }
 
 
-/* =====================================================
-   IMAGEM PRINCIPAL DO DESTINO
-===================================================== */
-
 .destination-hero {
+
     position: relative;
 
     width: 100%;
-    height: 48%;
 
-    flex-shrink: 0;
+    height: 48%;
 
     overflow: hidden;
 
-    border-radius: 0 0 28px 28px;
+    border-radius:
+        0 0 28px 28px;
+
 }
 
 
 .destination-hero > img {
+
     width: 100%;
+
     height: 100%;
 
     display: block;
 
     object-fit: cover;
+
 }
 
 
-/* =====================================================
-   BOTÃO VOLTAR
-===================================================== */
-
 .back-button {
+
     position: absolute;
 
     top: 18px;
+
     left: 18px;
 
     z-index: 10;
 
     width: 40px;
+
     height: 40px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border: none;
 
     border-radius: 50%;
 
-    background: rgba(255, 255, 255, 0.85);
+    background:
+        rgba(255, 255, 255, 0.85);
 
     color: #333333;
 
@@ -741,223 +1033,183 @@ body {
     box-shadow:
         0 3px 10px rgba(0, 0, 0, 0.15);
 
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease;
 }
 
 
-.back-button:active {
-    transform: scale(0.9);
-}
+.destination-dots,
+.country-dots {
 
-
-.back-button:hover {
-    background: #ffffff;
-}
-
-
-/* =====================================================
-   INDICADORES DA IMAGEM
-===================================================== */
-
-.destination-dots {
     position: absolute;
 
     bottom: 18px;
+
     left: 50%;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%);
 
     display: flex;
 
     gap: 5px;
 
-    z-index: 5;
 }
 
 
 .dot {
+
     width: 6px;
+
     height: 6px;
 
     border-radius: 50%;
 
-    background-color: rgba(255, 255, 255, 0.55);
+    background:
+        rgba(255, 255, 255, 0.55);
+
 }
 
 
 .dot.active {
+
     width: 18px;
 
     border-radius: 10px;
 
-    background-color: #ffffff;
+    background: #ffffff;
+
 }
 
-
-/* =====================================================
-   INFORMAÇÕES DO DESTINO
-===================================================== */
 
 .destination-details {
+
     flex: 1;
 
-    padding: 24px 22px 20px;
+    padding:
+        24px 22px 20px;
 
     overflow-y: auto;
+
 }
 
-
-.destination-details::-webkit-scrollbar {
-    display: none;
-}
-
-
-/* Título */
 
 .destination-details h1 {
-    margin: 0 0 6px;
+
+    margin:
+        0 0 6px;
+
+    font-size: 25px;
 
     color: #222222;
 
-    font-size: 25px;
-    font-weight: 700;
-
-    line-height: 1.2;
 }
 
-
-/* Localização */
 
 .destination-location {
-    margin: 0 0 18px;
 
-    color: #8b8b8b;
+    margin:
+        0 0 18px;
 
-    font-size: 12px;
+    color: #8792a5;
+
+    font-size: 13px;
+
 }
 
 
-/* Descrição */
+.destination-details > p {
 
-#destination-description {
-    margin: 0 0 18px;
+    color: #666666;
 
-    color: #777777;
+    font-size: 14px;
 
-    font-size: 12px;
+    line-height: 1.5;
 
-    line-height: 1.6;
 }
 
-
-/* =====================================================
-   AVALIAÇÃO
-===================================================== */
 
 .rating {
+
     display: flex;
 
     align-items: center;
 
-    gap: 8px;
+    gap: 10px;
 
-    margin-bottom: 20px;
+    margin-top: 20px;
+
 }
 
 
 .rating span {
-    color: #f3b942;
 
-    font-size: 15px;
+    color: #f4b400;
 
-    letter-spacing: 1px;
+    font-size: 18px;
+
 }
 
 
 .rating small {
-    color: #999999;
 
-    font-size: 10px;
+    color: #888888;
+
 }
 
 
-/* =====================================================
-   PARTE INFERIOR / PREÇO
-===================================================== */
-
 .destination-bottom {
+
+    margin-top: 25px;
+
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
-    gap: 12px;
+    gap: 15px;
 
-    margin-top: auto;
 }
 
 
 .price-container {
+
     display: flex;
 
     flex-direction: column;
+
 }
 
 
 .price-container strong {
-    color: #222222;
 
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 21px;
+
 }
 
 
 .price-container small {
-    margin-top: 3px;
 
     color: #999999;
 
-    font-size: 9px;
 }
 
 
-/* Botão roteiro */
-
 .route-button {
+
     border: none;
 
-    padding: 13px 17px;
+    border-radius: 20px;
 
-    border-radius: 14px;
+    padding:
+        12px 16px;
 
-    background-color: #2f2f2f;
+    background: #333333;
 
-    color: #ffffff;
-
-    font-family: 'Inter', sans-serif;
-
-    font-size: 10px;
-    font-weight: 600;
+    color: white;
 
     cursor: pointer;
 
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease;
 }
-
-
-.route-button:active {
-    transform: scale(0.95);
-}
-
-
-.route-button:hover {
-    background-color: #111111;
-}
-
 
 
 /* =====================================================
@@ -965,34 +1217,36 @@ body {
 ===================================================== */
 
 #screen-country {
+
     background-color: #111111;
 
-    overflow: hidden;
 }
 
 
 .country-page {
-    position: relative;
 
     width: 100%;
+
     height: 100%;
 
-    display: flex;
-    flex-direction: column;
+    position: relative;
 
-    justify-content: flex-end;
+    display: flex;
+
+    align-items: flex-end;
+
+    padding:
+        30px;
 
     background-size: cover;
+
     background-position: center;
 
-    transition:
-        background-image 0.3s ease;
 }
 
 
-/* Escurecimento da imagem */
+.country-page::after {
 
-.country-page::before {
     content: "";
 
     position: absolute;
@@ -1002,146 +1256,68 @@ body {
     background:
         linear-gradient(
             to bottom,
-            rgba(0, 0, 0, 0.15) 20%,
-            rgba(0, 0, 0, 0.78) 100%
+            rgba(0,0,0,0.05),
+            rgba(0,0,0,0.75)
         );
 
-    z-index: 1;
 }
 
-
-/* =====================================================
-   BOTÃO VOLTAR DO PAÍS
-===================================================== */
 
 .country-back {
-    top: 20px;
+
+    top: 18px;
+
     left: 18px;
 
-    background: rgba(255, 255, 255, 0.82);
 }
 
 
-/* =====================================================
-   TEXTO DO PAÍS
-===================================================== */
-
 .country-content {
+
     position: relative;
 
     z-index: 2;
 
-    padding: 0 28px 100px;
+    color: white;
 
-    color: #ffffff;
+    margin-bottom: 45px;
+
 }
 
 
 .country-content h1 {
+
     margin: 0;
 
-    color: #ffffff;
+    font-size: 30px;
 
-    font-size: 42px;
-    font-weight: 800;
+    line-height: 1.1;
 
-    line-height: 0.95;
-
-    letter-spacing: -1px;
 }
 
 
 .country-content h1 span {
+
     display: block;
 
-    margin-top: 5px;
+    font-size: 38px;
 
-    font-size: 42px;
-    font-weight: 800;
 }
 
 
 .country-content p {
-    max-width: 260px;
 
-    margin: 18px 0 0;
+    max-width: 280px;
 
-    color: rgba(255, 255, 255, 0.88);
-
-    font-size: 13px;
+    font-size: 14px;
 
     line-height: 1.5;
+
 }
 
-
-/* =====================================================
-   INDICADORES DO PAÍS
-===================================================== */
 
 .country-dots {
-    position: absolute;
-
-    bottom: 35px;
-    left: 50%;
-
-    transform: translateX(-50%);
 
     z-index: 3;
-
-    display: flex;
-
-    gap: 5px;
-}
-
-
-.country-dots .dot {
-    background-color: rgba(255, 255, 255, 0.45);
-}
-
-
-.country-dots .dot.active {
-    background-color: #ffffff;
-}
-
-
-/* =====================================================
-   AJUSTES PARA TELAS MENORES
-===================================================== */
-
-@media (max-height: 700px) {
-
-    .destination-hero {
-        height: 43%;
-    }
-
-    .destination-details {
-        padding-top: 18px;
-    }
-
-    .destination-details h1 {
-        font-size: 22px;
-    }
-
-    .country-content {
-        padding-bottom: 85px;
-    }
-
-    .country-content h1,
-    .country-content h1 span {
-        font-size: 36px;
-    }
-
-}
-
-
-/* =====================================================
-   AJUSTES PARA TELAS MAIORES
-===================================================== */
-
-@media (min-height: 850px) {
-
-    .destination-hero {
-        height: 50%;
-    }
 
 }
