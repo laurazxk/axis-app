@@ -13,7 +13,9 @@
     <title>Axis App</title>
 
 
-    <!-- Fonte -->
+    <!-- ==============================
+         FONTES
+    =============================== -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -28,9 +30,14 @@
         rel="stylesheet"
     >
 
+    <!-- ÍCONES -->
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    >
+
 
     <!-- CSS -->
-
     <link
         rel="stylesheet"
         href="css/estilo.css"
@@ -40,7 +47,6 @@
 
 
 <body>
-
 
 <div class="app-container">
 
@@ -59,7 +65,7 @@
 
             <img
                 src="imagens/logo.png"
-                alt="Axis Logo"
+                alt="Logo Axis"
                 class="real-logo"
             >
 
@@ -77,9 +83,8 @@
     </div>
 
 
-
     <!-- ==================================================
-         APRESENTAÇÃO
+         DESCOBRIR
     =================================================== -->
 
     <div
@@ -111,7 +116,6 @@
     </div>
 
 
-
     <!-- ==================================================
          PLANEJE 1
     =================================================== -->
@@ -127,7 +131,6 @@
             class="plan-illustration"
         >
 
-
         <div class="text-group">
 
             <h2>
@@ -141,7 +144,6 @@
 
         </div>
 
-
         <button
             class="btn-round"
             onclick="changeScreen('screen-plan-2')"
@@ -150,7 +152,6 @@
         </button>
 
     </div>
-
 
 
     <!-- ==================================================
@@ -168,7 +169,6 @@
             class="plan-illustration"
         >
 
-
         <div class="text-group">
 
             <h2>
@@ -182,7 +182,6 @@
 
         </div>
 
-
         <button
             class="btn-round"
             onclick="changeScreen('screen-plan-3')"
@@ -191,7 +190,6 @@
         </button>
 
     </div>
-
 
 
     <!-- ==================================================
@@ -209,7 +207,6 @@
             class="plan-illustration"
         >
 
-
         <div class="text-group">
 
             <h2>
@@ -223,7 +220,6 @@
 
         </div>
 
-
         <button
             class="btn-round"
             onclick="changeScreen('screen-plan-4')"
@@ -232,7 +228,6 @@
         </button>
 
     </div>
-
 
 
     <!-- ==================================================
@@ -250,7 +245,6 @@
             class="plan-illustration"
         >
 
-
         <div class="text-group">
 
             <h2>
@@ -263,14 +257,6 @@
             </p>
 
         </div>
-
-
-        <!--
-            ALTERAÇÃO IMPORTANTE:
-
-            Ao terminar a apresentação,
-            vamos para o home.html.
-        -->
 
         <button
             class="btn-round"
@@ -285,39 +271,33 @@
 </div>
 
 
-
 <!-- ==================================================
      JAVASCRIPT
-=================================================== -->
+================================================== -->
 
 <script>
 
-    function changeScreen(screenId) {
+function changeScreen(screenId) {
 
-        document
-            .querySelectorAll('.screen')
-            .forEach(screen => {
-
-                screen.classList.remove('active');
-
-            });
+    document
+        .querySelectorAll('.screen')
+        .forEach(screen => {
+            screen.classList.remove('active');
+        });
 
 
-        const screen =
-            document.getElementById(screenId);
+    const target =
+        document.getElementById(screenId);
 
 
-        if (screen) {
-
-            screen.classList.add('active');
-
-        }
-
+    if (target) {
+        target.classList.add('active');
     }
+
+}
 
 </script>
 
 
 </body>
-
 </html>
