@@ -1,20 +1,30 @@
+:root {
+    --bg-mobile: #ffffff;
+    --text-dark: #111111;
+    --text-muted: #666666;
+    --btn-bg: #2b2b2b;
+}
 
+
+/* =====================================================
+   RESET
+===================================================== */
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    font-family: 'Inter', sans-serif;
 }
 
 html,
 body {
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: 100%;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background: #111111;
+    background-color: #121212;
 
     display: flex;
     justify-content: center;
@@ -26,50 +36,50 @@ body {
 }
 
 
-/* =========================================================
-   CONTAINER DO CELULAR
-========================================================= */
+/* =====================================================
+   CELULAR
+===================================================== */
 
 .app-container {
-    position: relative;
-
     width: 100vw;
     height: 100vh;
 
     max-width: 412px;
     max-height: 892px;
 
-    background: #ffffff;
+    background-color: var(--bg-mobile);
+
+    position: relative;
 
     overflow: hidden;
+
+    box-shadow:
+        0 24px 48px rgba(0, 0, 0, 0.8);
 }
 
 
 @media (min-width: 450px) {
 
     .app-container {
-        width: 412px;
-        height: 850px;
+        border-radius: 40px;
 
-        border: 10px solid #333333;
+        border: 12px solid #333333;
 
-        border-radius: 38px;
-
-        box-shadow:
-            0 20px 50px rgba(0, 0, 0, 0.65);
+        height: 85vh;
     }
 
 }
 
 
-/* =========================================================
+/* =====================================================
    TELAS
-========================================================= */
+===================================================== */
 
 .screen {
     position: absolute;
 
-    inset: 0;
+    top: 0;
+    left: 0;
 
     width: 100%;
     height: 100%;
@@ -78,38 +88,40 @@ body {
     flex-direction: column;
 
     opacity: 0;
-    visibility: hidden;
 
     pointer-events: none;
 
-    transition:
-        opacity 0.3s ease,
-        visibility 0.3s ease;
+    visibility: hidden;
 
-    overflow: hidden;
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
 }
 
 
 .screen.active {
     opacity: 1;
-    visibility: visible;
 
     pointer-events: auto;
+
+    visibility: visible;
 }
 
 
-/* =========================================================
+/* =====================================================
    SPLASH
-========================================================= */
+===================================================== */
 
 #screen-splash {
-    background: #ffffff;
+    background-color: #ffffff;
+
+    justify-content: center;
 
     align-items: center;
-    justify-content: center;
 
     cursor: pointer;
 }
+
 
 .logo-box {
     display: flex;
@@ -117,10 +129,10 @@ body {
     flex-direction: column;
 
     align-items: center;
-    justify-content: center;
 
     text-align: center;
 }
+
 
 .real-logo {
     width: 180px;
@@ -129,64 +141,85 @@ body {
 
     object-fit: contain;
 
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
-.logo-title-text {
-    color: #111111;
 
+.logo-title-text {
     font-size: 16px;
 
     font-weight: 700;
 
     letter-spacing: 6px;
 
+    color: #111111;
+
+    margin: 0;
+
     text-transform: uppercase;
 
     padding-left: 6px;
 }
 
+
 .splash-footer {
     position: absolute;
 
-    bottom: 38px;
+    bottom: 40px;
 
-    color: #888888;
+    font-size: 12px;
 
-    font-size: 11px;
+    color: var(--text-muted);
+
+    animation: pulse 1.5s infinite;
 }
 
 
-/* =========================================================
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+}
+
+
+/* =====================================================
    DESCOBRIR
-========================================================= */
+===================================================== */
 
 #screen-discover {
-    justify-content: flex-end;
 
     background:
         linear-gradient(
             to bottom,
-            rgba(0, 0, 0, 0.05),
-            rgba(0, 0, 0, 0.65)
+            rgba(0, 0, 0, 0.1) 40%,
+            rgba(0, 0, 0, 0.6) 100%
         ),
         url('https://cdn.cosmos.so/13d8354b-8e00-4a61-8327-33902d5cf308?format=webp');
 
     background-size: cover;
 
     background-position: center;
+
+    justify-content: flex-end;
 }
 
+
 .bottom-card {
-    width: 100%;
 
-    padding:
-        38px 28px 32px;
-
-    background: #ffffff;
+    background-color: #ffffff;
 
     border-radius:
-        30px 30px 0 0;
+        32px 32px 0 0;
+
+    padding:
+        40px 30px;
 
     text-align: center;
 
@@ -194,44 +227,51 @@ body {
         0 -10px 30px rgba(0, 0, 0, 0.15);
 }
 
-.bottom-card h2 {
-    color: #222222;
 
-    font-size: 23px;
+.bottom-card h2 {
+
+    font-size: 24px;
 
     font-weight: 700;
 
+    color: var(--text-dark);
+
     line-height: 1.3;
 
-    margin-bottom: 14px;
+    margin:
+        0 0 16px 0;
 }
+
 
 .bottom-card p {
-    color: #777777;
 
-    font-size: 13px;
+    font-size: 14px;
 
-    line-height: 1.55;
+    color: var(--text-muted);
 
-    margin-bottom: 27px;
+    line-height: 1.6;
+
+    margin:
+        0 0 32px 0;
 }
 
+
 .btn-main {
-    width: 100%;
 
-    height: 48px;
-
-    border: none;
-
-    border-radius: 24px;
-
-    background: #303030;
+    background-color: var(--btn-bg);
 
     color: #ffffff;
 
-    font-family: 'Inter', sans-serif;
+    border: none;
 
-    font-size: 14px;
+    padding:
+        16px 0;
+
+    width: 100%;
+
+    border-radius: 16px;
+
+    font-size: 16px;
 
     font-weight: 600;
 
@@ -239,106 +279,159 @@ body {
 }
 
 
-/* =========================================================
+.btn-main:hover {
+
+    background-color: #111111;
+}
+
+
+/* =====================================================
    TELAS PLANEJE
-========================================================= */
+===================================================== */
 
 #screen-plan,
 #screen-plan-2,
 #screen-plan-3,
 #screen-plan-4 {
-    background: #ffffff;
 
-    align-items: center;
+    background-color: #ffffff;
+
+    display: flex;
+
+    flex-direction: column;
 
     justify-content: space-evenly;
 
+    align-items: center;
+
     padding:
-        30px 28px;
+        40px 30px;
 }
 
-.plan-illustration {
-    width: 280px;
 
-    max-width: 85%;
+.plan-content-wrapper {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 30px;
+
+    width: 100%;
+}
+
+
+.plan-illustration {
+
+    width: 300px;
 
     height: auto;
 
     object-fit: contain;
 }
 
+
 .text-group {
-    width: 100%;
 
     text-align: center;
 
-    padding: 0 8px;
+    padding:
+        0 10px;
 }
 
-.text-group h2 {
-    color: #303030;
 
-    font-size: 23px;
+.text-group h2 {
+
+    font-size: 24px;
 
     font-weight: 700;
 
+    color: var(--text-dark);
+
     line-height: 1.3;
 
-    margin-bottom: 12px;
+    margin:
+        0 0 12px 0;
 }
+
 
 .text-group p {
-    color: #777777;
 
-    font-size: 13px;
+    font-size: 14px;
 
-    line-height: 1.55;
+    color: var(--text-muted);
+
+    line-height: 1.5;
+
+    margin: 0;
 }
 
-.btn-round {
-    width: 58px;
-    height: 58px;
 
-    border: none;
+.btn-round {
+
+    width: 60px;
+
+    height: 60px;
 
     border-radius: 50%;
+
+    background-color: #555555;
+
+    color: #ffffff;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
-    background: #444444;
+    font-size: 24px;
 
-    color: #ffffff;
-
-    font-size: 23px;
+    border: none;
 
     cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        background-color 0.2s;
 }
 
 
-/* =========================================================
-   HOME
-========================================================= */
+.btn-round:hover {
+
+    transform: scale(1.05);
+
+    background-color: #444444;
+}
+
+
+/* =====================================================
+   =====================================================
+   HOME — NÃO ALTERAR A ESTRUTURA
+   =====================================================
+   ===================================================== */
 
 #screen-home {
-    background: #f7f7f7;
+
+    background-color: #f7f7f7;
 
     color: #222222;
+
+    overflow: hidden;
 }
 
 
-/* =========================================================
+/* =====================================================
    HEADER
-========================================================= */
+===================================================== */
 
 .home-header {
-    width: 100%;
 
-    height: 64px;
+    height: 62px;
 
-    min-height: 64px;
+    min-height: 62px;
 
     display: grid;
 
@@ -353,29 +446,28 @@ body {
 
 
 .menu-button {
-    justify-self: start;
 
-    width: 34px;
-    height: 34px;
+    justify-self: start;
 
     border: none;
 
     background: transparent;
 
-    color: #8290a5;
+    color: #7d8798;
 
-    font-size: 23px;
+    font-size: 20px;
 
     cursor: pointer;
 }
 
 
 .home-header h2 {
+
     justify-self: center;
 
     margin: 0;
 
-    color: #8290a5;
+    color: #7d8798;
 
     font-size: 15px;
 
@@ -384,10 +476,12 @@ body {
 
 
 .profile-button {
+
     justify-self: end;
 
-    width: 32px;
-    height: 32px;
+    width: 34px;
+
+    height: 34px;
 
     padding: 0;
 
@@ -404,50 +498,54 @@ body {
 
 
 .profile-button img {
+
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
 }
 
 
-/* =========================================================
+/* =====================================================
    CONTEÚDO HOME
-========================================================= */
+===================================================== */
 
 .home-content {
+
     flex: 1;
 
-    width: 100%;
-
-    overflow-x: hidden;
     overflow-y: auto;
 
-    padding:
-        0 12px 80px;
+    overflow-x: hidden;
 
-    scrollbar-width: none;
+    padding:
+        3px 14px 85px;
 
     -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
 }
 
 
 .home-content::-webkit-scrollbar {
+
     display: none;
 }
 
 
-/* =========================================================
-   OLÁ
-========================================================= */
+/* =====================================================
+   OLÁ, KYARA!
+===================================================== */
 
 .home-content > h1 {
+
     margin:
-        0 9px 22px;
+        0 30px 28px;
 
     color: #303030;
 
-    font-size: 25px;
+    font-size: 28px;
 
     font-weight: 700;
 
@@ -455,18 +553,19 @@ body {
 }
 
 
-/* =========================================================
+/* =====================================================
    BUSCA
-========================================================= */
+===================================================== */
 
 .destination-search {
+
     width:
-        calc(100% - 4px);
+        calc(100% - 32px);
 
     height: 47px;
 
     margin:
-        0 2px 34px;
+        0 16px 43px;
 
     padding:
         0 16px;
@@ -481,218 +580,247 @@ body {
 
     border-radius: 25px;
 
-    color: #999999;
+    color: #8b8b8b;
 
-    font-size: 11px;
+    font-size: 13px;
 
     box-shadow:
-        0 5px 11px rgba(0, 0, 0, 0.17);
+        0 5px 9px rgba(0, 0, 0, 0.20);
 
     cursor: pointer;
 }
 
 
 .search-icon {
-    color: #444444;
 
-    font-size: 19px;
+    color: #3f3f3f;
+
+    font-size: 23px;
+
+    line-height: 1;
 }
 
 
-/* =========================================================
+/* =====================================================
    SEÇÕES
-========================================================= */
+===================================================== */
 
 .home-section {
+
     width: 100%;
 
-    margin-bottom: 32px;
+    margin-bottom: 28px;
 }
 
 
 .home-section > h2 {
+
     margin:
-        0 9px 11px;
+        0 32px 15px;
 
-    color: #8795aa;
+    color: #8792a5;
 
-    font-size: 16px;
+    font-size: 19px;
 
     font-weight: 600;
-
-    line-height: 1.2;
 }
 
 
-/* =========================================================
+/* =====================================================
    FILTROS
-========================================================= */
+===================================================== */
 
 .category-buttons {
-    display: flex;
 
-    align-items: center;
+    display: flex;
 
     gap: 8px;
 
     margin:
-        0 9px 16px;
+        0 32px 17px;
 
     overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
 
     scrollbar-width: none;
 }
 
 
 .category-buttons::-webkit-scrollbar {
+
     display: none;
 }
 
 
 .category {
+
     flex-shrink: 0;
 
-    height: 23px;
-
     padding:
-        0 12px;
+        7px 13px;
 
     border: none;
 
-    border-radius: 14px;
+    border-radius: 18px;
 
-    background: #e5e5e5;
+    background-color: #e6e6e6;
 
     color: #555555;
 
     font-family: 'Inter', sans-serif;
 
-    font-size: 8px;
+    font-size: 10px;
 
     cursor: pointer;
+
+    box-shadow:
+        0 3px 6px rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+.category:active {
+
+    transform: scale(0.94);
 }
 
 
 .category.active {
-    background: #303030;
+
+    background-color: #333333;
 
     color: #ffffff;
 }
 
 
-/* =========================================================
-   CARDS
-   GRANDE COMO NA REFERÊNCIA
-========================================================= */
+/* =====================================================
+   CARROSSEL
+===================================================== */
 
 .cards-container {
-    width: max-content;
-
-    min-width: 100%;
 
     display: flex;
 
-    gap: 14px;
+    gap: 20px;
+
+    width: 100%;
 
     padding:
-        0 9px 8px;
+        0 0 10px 18px;
 
     overflow-x: auto;
+
     overflow-y: hidden;
 
+    -webkit-overflow-scrolling: touch;
+
     scroll-snap-type: x mandatory;
+
+    scroll-behavior: smooth;
 
     scrollbar-width: none;
 }
 
 
 .cards-container::-webkit-scrollbar {
+
     display: none;
 }
 
 
-/* =========================================================
-   CARD GRANDE
-========================================================= */
+/* =====================================================
+   CARDS GRANDES
+===================================================== */
 
 .destination-card {
+
     flex:
-        0 0 112px !important;
+        0 0 145px;
 
-    width: 112px !important;
+    min-width: 145px;
 
-    min-width: 112px !important;
+    height: 190px;
 
-    height: 151px;
+    background-color: #ffffff;
 
-    background: #ffffff;
-
-    border-radius: 11px;
+    border-radius: 14px;
 
     overflow: hidden;
 
     scroll-snap-align: start;
 
-    box-shadow:
-        0 4px 10px rgba(0, 0, 0, 0.15);
-
     cursor: pointer;
 
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.16);
+
+    animation:
+        cardAppear 0.45s ease both;
+
     transition:
-        transform 0.15s ease;
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 
 .destination-card:active {
-    transform: scale(0.97);
+
+    transform: scale(0.96);
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
 
-/* =========================================================
-   IMAGEM GRANDE
-========================================================= */
+/* =====================================================
+   IMAGENS DOS CARDS
+===================================================== */
 
 .destination-card img {
+
     display: block;
 
-    width: 112px !important;
+    width:
+        calc(100% - 10px);
 
-    height: 111px !important;
+    height: 137px;
 
-    min-height: 111px;
+    margin: 5px;
 
     object-fit: cover;
 
-    background: #eeeeee;
+    border-radius: 10px;
+
+    background-color: #eeeeee;
 }
 
 
-/* =========================================================
-   INFORMAÇÕES
-========================================================= */
+/* =====================================================
+   TEXTO DOS CARDS
+===================================================== */
 
 .card-info {
-    width: 100%;
-
-    height: 40px;
 
     padding:
-        7px 8px 6px;
+        4px 10px 8px;
 }
 
 
 .card-info strong {
+
     display: block;
 
     margin-bottom: 3px;
 
     color: #333333;
 
-    font-size: 8px;
+    font-size: 11px;
 
-    font-weight: 600;
-
-    line-height: 1.1;
+    font-weight: 700;
 
     white-space: nowrap;
 
@@ -703,46 +831,75 @@ body {
 
 
 .card-info span {
+
     display: block;
 
     color: #999999;
 
-    font-size: 7px;
+    font-size: 10px;
 
-    line-height: 1.1;
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
 }
 
 
-/* =========================================================
-   SEGUNDA FILEIRA
-========================================================= */
+/* =====================================================
+   ANIMAÇÃO
+===================================================== */
 
-.home-section:nth-of-type(2) {
-    margin-top: 3px;
+@keyframes cardAppear {
 
-    margin-bottom: 10px;
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(12px)
+            scale(0.97);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
 }
 
 
-.home-section:nth-of-type(2) .cards-container {
-    padding-bottom: 5px;
+/* =====================================================
+   ESPAÇO FINAL DA HOME
+===================================================== */
+
+.home-bottom-space {
+
+    height: 70px;
+
+    min-height: 70px;
 }
 
 
-/* =========================================================
-   NAVEGAÇÃO INFERIOR
-   GLASSMORPHISM
-========================================================= */
+/* =====================================================
+   NAVEGAÇÃO INFERIOR — GLASS
+===================================================== */
 
 .bottom-navigation {
+
     position: absolute;
 
     left: 16px;
+
     right: 16px;
 
-    bottom: 11px;
+    bottom: 12px;
 
-    height: 58px;
+    height: 66px;
 
     display: flex;
 
@@ -750,44 +907,47 @@ body {
 
     justify-content: space-around;
 
-    padding:
-        0 5px;
-
     background:
-        rgba(115, 115, 115, 0.58);
+        rgba(70, 70, 70, 0.55);
 
     border:
-        1px solid rgba(255, 255, 255, 0.45);
+        1px solid
+        rgba(255, 255, 255, 0.45);
 
-    border-radius: 31px;
+    border-radius: 34px;
 
     backdrop-filter:
-        blur(20px);
+        blur(18px)
+        saturate(140%);
 
     -webkit-backdrop-filter:
-        blur(20px);
+        blur(18px)
+        saturate(140%);
 
     box-shadow:
 
-        0 7px 20px
-        rgba(0, 0, 0, 0.20),
+        0 8px 25px
+        rgba(0, 0, 0, 0.22),
 
-        inset 0 1px 2px
-        rgba(255, 255, 255, 0.42);
+        inset
+        0 1px 1px
+        rgba(255, 255, 255, 0.45);
 
     z-index: 100;
 }
 
 
-/* =========================================================
-   ITENS DA NAVEGAÇÃO
-========================================================= */
+/* =====================================================
+   BOTÕES DA NAVEGAÇÃO
+===================================================== */
 
 .nav-item {
+
     position: relative;
 
-    width: 54px;
-    height: 51px;
+    width: 58px;
+
+    height: 55px;
 
     display: flex;
 
@@ -797,115 +957,152 @@ body {
 
     justify-content: center;
 
-    gap: 3px;
+    gap: 2px;
 
     border: none;
 
     background: transparent;
 
     color:
-        rgba(255, 255, 255, 0.88);
+        rgba(255, 255, 255, 0.75);
+
+    font-family: 'Inter', sans-serif;
 
     cursor: pointer;
 
-    padding: 0;
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
 }
 
 
-.nav-item .material-symbols-outlined {
+.nav-item:active {
+
+    transform: scale(0.90);
+}
+
+
+/* =====================================================
+   ÍCONES
+===================================================== */
+
+.nav-icon {
+
     position: relative;
 
-    z-index: 3;
+    z-index: 2;
 
-    font-size: 19px;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 28px;
+
+    height: 28px;
+
+    font-size: 22px;
 
     line-height: 1;
 }
 
 
 .nav-item small {
+
     position: relative;
 
-    z-index: 3;
+    z-index: 2;
 
-    color:
-        rgba(255, 255, 255, 0.92);
+    font-size: 8px;
 
-    font-size: 6px;
-
-    font-weight: 500;
+    font-weight: 600;
 
     line-height: 1;
 }
 
 
-/* =========================================================
-   CÍRCULO GLASS DO HOME ATIVO
-========================================================= */
+/* =====================================================
+   HOME ATIVO
+===================================================== */
+
+.nav-item.active {
+
+    color: #ffffff;
+}
+
 
 .nav-item.active::before {
+
     content: "";
 
     position: absolute;
+
+    width: 45px;
+
+    height: 45px;
 
     top: 4px;
 
     left: 50%;
 
-    width: 42px;
-    height: 42px;
-
     transform:
         translateX(-50%);
 
-    border-radius: 50%;
-
     background:
-        rgba(255, 255, 255, 0.14);
+        rgba(255, 255, 255, 0.20);
 
     border:
         1px solid
-        rgba(255, 255, 255, 0.40);
+        rgba(255, 255, 255, 0.35);
+
+    border-radius: 50%;
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
 
     box-shadow:
 
-        inset 0 1px 3px
-        rgba(255, 255, 255, 0.48),
+        inset
+        0 1px 2px
+        rgba(255, 255, 255, 0.50),
 
-        0 2px 7px
+        0 2px 8px
         rgba(0, 0, 0, 0.15);
 }
 
 
-.nav-item.active {
-    color: #ffffff;
-}
-
-
-/* =========================================================
+/* =====================================================
    TELA DE DESTINO
-========================================================= */
+===================================================== */
 
 #screen-destination {
-    background: #ffffff;
+
+    background-color: #ffffff;
 
     overflow: hidden;
 }
 
 
 .destination-page {
+
     width: 100%;
+
     height: 100%;
 
     display: flex;
 
     flex-direction: column;
 
-    background: #ffffff;
+    background-color: #ffffff;
 }
 
 
 .destination-hero {
+
     position: relative;
 
     width: 100%;
@@ -922,7 +1119,9 @@ body {
 
 
 .destination-hero > img {
+
     width: 100%;
+
     height: 100%;
 
     display: block;
@@ -931,24 +1130,28 @@ body {
 }
 
 
-/* =========================================================
+/* =====================================================
    BOTÃO VOLTAR
-========================================================= */
+===================================================== */
 
 .back-button {
+
     position: absolute;
 
     top: 18px;
+
     left: 18px;
 
     z-index: 20;
 
     width: 40px;
+
     height: 40px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     border: none;
@@ -956,7 +1159,7 @@ body {
     border-radius: 50%;
 
     background:
-        rgba(255, 255, 255, 0.88);
+        rgba(255, 255, 255, 0.85);
 
     color: #333333;
 
@@ -970,11 +1173,12 @@ body {
 }
 
 
-/* =========================================================
-   DOTS
-========================================================= */
+/* =====================================================
+   PONTOS
+===================================================== */
 
 .destination-dots {
+
     position: absolute;
 
     bottom: 17px;
@@ -993,7 +1197,9 @@ body {
 
 
 .dot {
+
     width: 6px;
+
     height: 6px;
 
     border-radius: 50%;
@@ -1004,6 +1210,7 @@ body {
 
 
 .dot.active {
+
     width: 18px;
 
     border-radius: 10px;
@@ -1012,11 +1219,12 @@ body {
 }
 
 
-/* =========================================================
+/* =====================================================
    DETALHES DO DESTINO
-========================================================= */
+===================================================== */
 
 .destination-details {
+
     flex: 1;
 
     padding:
@@ -1029,11 +1237,13 @@ body {
 
 
 .destination-details::-webkit-scrollbar {
+
     display: none;
 }
 
 
 .destination-details h1 {
+
     color: #222222;
 
     font-size: 24px;
@@ -1042,64 +1252,75 @@ body {
 
     line-height: 1.2;
 
-    margin-bottom: 6px;
+    margin:
+        0 0 6px;
 }
 
 
 .destination-location {
-    color: #8795aa;
+
+    margin:
+        0 0 18px;
+
+    color: #8b8b8b;
+
+    font-size: 12px;
+}
+
+
+#destination-description {
+
+    margin:
+        0 0 18px;
+
+    color: #777777;
 
     font-size: 12px;
 
-    margin-bottom: 17px;
+    line-height: 1.6;
 }
 
 
-.destination-details > p {
-    color: #666666;
-
-    font-size: 13px;
-
-    line-height: 1.55;
-}
-
-
-/* =========================================================
+/* =====================================================
    AVALIAÇÃO
-========================================================= */
+===================================================== */
 
 .rating {
+
     display: flex;
 
     align-items: center;
 
-    gap: 9px;
+    gap: 8px;
 
-    margin-top: 19px;
+    margin-bottom: 20px;
 }
 
 
 .rating span {
-    color: #e8ad20;
 
-    font-size: 17px;
+    color: #f3b942;
+
+    font-size: 15px;
 
     letter-spacing: 1px;
 }
 
 
 .rating small {
-    color: #888888;
 
-    font-size: 11px;
+    color: #999999;
+
+    font-size: 10px;
 }
 
 
-/* =========================================================
+/* =====================================================
    PREÇO
-========================================================= */
+===================================================== */
 
 .destination-bottom {
+
     display: flex;
 
     align-items: center;
@@ -1108,11 +1329,12 @@ body {
 
     gap: 12px;
 
-    margin-top: 23px;
+    margin-top: auto;
 }
 
 
 .price-container {
+
     display: flex;
 
     flex-direction: column;
@@ -1120,38 +1342,41 @@ body {
 
 
 .price-container strong {
+
     color: #222222;
 
-    font-size: 20px;
+    font-size: 18px;
 
     font-weight: 700;
 }
 
 
 .price-container small {
+
+    margin-top: 3px;
+
     color: #999999;
 
     font-size: 9px;
-
-    margin-top: 2px;
 }
 
 
 .route-button {
+
     border: none;
 
-    border-radius: 22px;
-
     padding:
-        12px 16px;
+        13px 17px;
 
-    background: #303030;
+    border-radius: 14px;
+
+    background-color: #2f2f2f;
 
     color: #ffffff;
 
     font-family: 'Inter', sans-serif;
 
-    font-size: 11px;
+    font-size: 10px;
 
     font-weight: 600;
 
@@ -1159,38 +1384,40 @@ body {
 }
 
 
-/* =========================================================
+/* =====================================================
    TELA DE PAÍS
-========================================================= */
+===================================================== */
 
 #screen-country {
-    background: #111111;
+
+    background-color: #111111;
 
     overflow: hidden;
 }
 
 
 .country-page {
+
     position: relative;
 
     width: 100%;
+
     height: 100%;
 
     display: flex;
 
-    align-items: flex-end;
+    flex-direction: column;
 
-    padding: 30px;
+    justify-content: flex-end;
 
     background-size: cover;
 
     background-position: center;
-
-    overflow: hidden;
 }
 
 
-.country-page::after {
+.country-page::before {
+
     content: "";
 
     position: absolute;
@@ -1200,62 +1427,72 @@ body {
     background:
         linear-gradient(
             to bottom,
-            rgba(0, 0, 0, 0.04),
-            rgba(0, 0, 0, 0.78)
+            rgba(0, 0, 0, 0.15) 20%,
+            rgba(0, 0, 0, 0.78) 100%
         );
 
-    pointer-events: none;
+    z-index: 1;
 }
 
 
 .country-back {
-    top: 18px;
-    left: 18px;
 
-    z-index: 10;
+    top: 20px;
+
+    left: 18px;
 }
 
 
 .country-content {
+
     position: relative;
 
-    z-index: 5;
+    z-index: 2;
+
+    padding:
+        0 28px 100px;
 
     color: #ffffff;
-
-    margin-bottom: 48px;
 }
 
 
 .country-content h1 {
+
+    margin: 0;
+
     color: #ffffff;
 
-    font-size: 29px;
+    font-size: 42px;
 
-    font-weight: 700;
+    font-weight: 800;
 
-    line-height: 1.05;
+    line-height: 0.95;
 
-    margin-bottom: 12px;
+    letter-spacing: -1px;
 }
 
 
 .country-content h1 span {
+
     display: block;
 
-    font-size: 38px;
+    margin-top: 5px;
+
+    font-size: 42px;
 
     font-weight: 800;
-
-    margin-top: 2px;
 }
 
 
 .country-content p {
-    max-width: 275px;
+
+    max-width: 260px;
+
+    margin:
+        18px 0 0;
 
     color:
-        rgba(255, 255, 255, 0.90);
+        rgba(255, 255, 255, 0.88);
 
     font-size: 13px;
 
@@ -1264,16 +1501,17 @@ body {
 
 
 .country-dots {
+
     position: absolute;
 
-    z-index: 6;
-
-    bottom: 23px;
+    bottom: 35px;
 
     left: 50%;
 
     transform:
         translateX(-50%);
+
+    z-index: 3;
 
     display: flex;
 
@@ -1281,94 +1519,60 @@ body {
 }
 
 
-/* =========================================================
-   TELAS PEQUENAS
-========================================================= */
+.country-dots .dot {
 
-@media (max-width: 360px) {
+    background-color:
+        rgba(255, 255, 255, 0.45);
+}
 
-    .home-header {
-        height: 58px;
 
-        min-height: 58px;
+.country-dots .dot.active {
+
+    background-color: #ffffff;
+}
+
+
+/* =====================================================
+   TELAS MENORES
+===================================================== */
+
+@media (max-height: 700px) {
+
+    .destination-hero {
+        height: 43%;
     }
 
-
-    .home-content {
-        padding:
-            0 10px 78px;
+    .destination-details {
+        padding-top: 18px;
     }
 
-
-    .home-content > h1 {
-        font-size: 24px;
-
-        margin-bottom: 20px;
+    .destination-details h1 {
+        font-size: 22px;
     }
 
-
-    .destination-search {
-        height: 45px;
-
-        margin-bottom: 30px;
+    .country-content {
+        padding-bottom: 85px;
     }
 
-
-    .home-section > h2 {
-        font-size: 15px;
-    }
-
-
-    .cards-container {
-        gap: 12px;
-
-        padding-left: 8px;
-        padding-right: 8px;
-    }
-
-
-    .destination-card {
-        flex:
-            0 0 108px !important;
-
-        width: 108px !important;
-
-        min-width: 108px !important;
-
-        height: 147px;
-    }
-
-
-    .destination-card img {
-        width: 108px !important;
-
-        height: 108px !important;
-    }
-
-
-    .bottom-navigation {
-        left: 13px;
-
-        right: 13px;
-
-        bottom: 10px;
+    .country-content h1,
+    .country-content h1 span {
+        font-size: 36px;
     }
 
 }
 
 
-/* =========================================================
-   DESKTOP / PREVIEW
-========================================================= */
+/* =====================================================
+   MOBILE MAIS ESTREITO
+===================================================== */
 
-@media (min-width: 450px) {
+@media (max-width: 360px) {
 
-    .bottom-navigation {
-        left: 16px;
+    .destination-card {
 
-        right: 16px;
+        flex-basis: 145px;
 
-        bottom: 11px;
+        min-width: 145px;
     }
 
 }
